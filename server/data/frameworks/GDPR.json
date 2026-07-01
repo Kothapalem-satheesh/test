@@ -1,0 +1,170 @@
+{
+  "name": "GDPR",
+  "description": "EU General Data Protection Regulation — core privacy and data protection obligations",
+  "version": "2016/679",
+  "optional": true,
+  "requirements": [
+    {
+      "requirement_code": "GDPR-5.1",
+      "category": "Principles - Lawfulness",
+      "requirement_text": "Personal data shall be processed lawfully, fairly, and in a transparent manner.",
+      "keywords": ["lawful basis", "transparency", "privacy notice", "legal basis"],
+      "expected_evidence": "Privacy policy, lawful basis documentation, transparency notices",
+      "severity": "Critical",
+      "recommendation_text": "Document lawful basis for each processing activity and publish clear privacy notices."
+    },
+    {
+      "requirement_code": "GDPR-5.2",
+      "category": "Principles - Purpose Limitation",
+      "requirement_text": "Personal data shall be collected for specified, explicit, and legitimate purposes and not further processed incompatibly.",
+      "keywords": ["purpose limitation", "data minimization", "processing purpose"],
+      "expected_evidence": "Data processing register, purpose statements in privacy policy",
+      "severity": "High",
+      "recommendation_text": "Maintain a record of processing purposes and restrict secondary use without new legal basis."
+    },
+    {
+      "requirement_code": "GDPR-6.1",
+      "category": "Lawfulness - Legal Basis",
+      "requirement_text": "Processing shall be lawful only if and to the extent that a valid legal basis applies (consent, contract, legal obligation, etc.).",
+      "keywords": ["consent", "legal basis", "legitimate interest", "Article 6"],
+      "expected_evidence": "Legal basis assessment, consent records, LIAs",
+      "severity": "Critical",
+      "recommendation_text": "Map each processing activity to an Article 6 legal basis with supporting documentation."
+    },
+    {
+      "requirement_code": "GDPR-7.1",
+      "category": "Consent",
+      "requirement_text": "Where consent is the legal basis, the controller shall demonstrate that the data subject has consented to processing.",
+      "keywords": ["consent management", "opt-in", "consent records", "withdrawal"],
+      "expected_evidence": "Consent logs, consent UI screenshots, withdrawal mechanism",
+      "severity": "High",
+      "recommendation_text": "Implement auditable consent capture with easy withdrawal equal to granting."
+    },
+    {
+      "requirement_code": "GDPR-12.1",
+      "category": "Transparency",
+      "requirement_text": "The controller shall provide transparent, intelligible, and easily accessible information about data processing to data subjects.",
+      "keywords": ["privacy notice", "transparency", "data subject information"],
+      "expected_evidence": "Published privacy policy, layered notices, FAQ",
+      "severity": "High",
+      "recommendation_text": "Publish layered privacy notices covering identity, purposes, rights, and retention."
+    },
+    {
+      "requirement_code": "GDPR-13.1",
+      "category": "Transparency - Collection",
+      "requirement_text": "When data is collected from the data subject, required information shall be provided at the time of collection.",
+      "keywords": ["collection notice", "privacy at collection", "Article 13"],
+      "expected_evidence": "Collection point notices, in-app disclosures",
+      "severity": "High",
+      "recommendation_text": "Display Article 13 information at every personal data collection point."
+    },
+    {
+      "requirement_code": "GDPR-15.1",
+      "category": "Data Subject Rights - Access",
+      "requirement_text": "Data subjects have the right to obtain confirmation and access to their personal data being processed.",
+      "keywords": ["DSAR", "subject access request", "right of access"],
+      "expected_evidence": "DSAR procedure, request tracking, response templates",
+      "severity": "High",
+      "recommendation_text": "Establish a DSAR intake and fulfillment process within 30-day SLA."
+    },
+    {
+      "requirement_code": "GDPR-17.1",
+      "category": "Data Subject Rights - Erasure",
+      "requirement_text": "Data subjects have the right to obtain erasure of personal data without undue delay where grounds apply.",
+      "keywords": ["right to erasure", "right to be forgotten", "data deletion"],
+      "expected_evidence": "Deletion procedure, retention schedule, erasure logs",
+      "severity": "High",
+      "recommendation_text": "Define erasure workflows across primary systems and backups where feasible."
+    },
+    {
+      "requirement_code": "GDPR-25.1",
+      "category": "Privacy by Design",
+      "requirement_text": "The controller shall implement appropriate technical and organizational measures for data protection by design and by default.",
+      "keywords": ["privacy by design", "data protection by default", "PbD"],
+      "expected_evidence": "SDLC privacy requirements, DPIA templates, architecture reviews",
+      "severity": "Critical",
+      "recommendation_text": "Integrate privacy requirements into SDLC gates and default to minimal data collection."
+    },
+    {
+      "requirement_code": "GDPR-30.1",
+      "category": "Records of Processing",
+      "requirement_text": "Controllers shall maintain records of processing activities under their responsibility.",
+      "keywords": ["ROPA", "processing register", "Article 30", "data inventory"],
+      "expected_evidence": "Record of Processing Activities (ROPA), data flow maps",
+      "severity": "Critical",
+      "recommendation_text": "Maintain an Article 30 ROPA updated at least quarterly."
+    },
+    {
+      "requirement_code": "GDPR-32.1",
+      "category": "Security of Processing",
+      "requirement_text": "Controllers and processors shall implement appropriate technical and organizational security measures.",
+      "keywords": ["encryption", "security measures", "pseudonymization", "confidentiality"],
+      "expected_evidence": "Security policy, encryption standards, access controls",
+      "severity": "Critical",
+      "recommendation_text": "Implement encryption at rest and in transit for personal data with documented key management."
+    },
+    {
+      "requirement_code": "GDPR-33.1",
+      "category": "Breach Notification",
+      "requirement_text": "Personal data breaches shall be notified to the supervisory authority within 72 hours where feasible.",
+      "keywords": ["breach notification", "72 hours", "supervisory authority", "incident"],
+      "expected_evidence": "Breach response plan, notification templates, incident register",
+      "severity": "Critical",
+      "recommendation_text": "Define 72-hour breach notification workflow with DPO and legal involvement."
+    },
+    {
+      "requirement_code": "GDPR-34.1",
+      "category": "Breach Communication",
+      "requirement_text": "When a breach is likely to result in high risk, data subjects shall be informed without undue delay.",
+      "keywords": ["data subject notification", "high risk breach", "breach communication"],
+      "expected_evidence": "Breach communication templates, risk assessment criteria",
+      "severity": "High",
+      "recommendation_text": "Include data subject notification criteria and templates in the breach response plan."
+    },
+    {
+      "requirement_code": "GDPR-35.1",
+      "category": "DPIA",
+      "requirement_text": "A data protection impact assessment shall be carried out where processing is likely to result in high risk.",
+      "keywords": ["DPIA", "privacy impact assessment", "high risk processing"],
+      "expected_evidence": "DPIA procedure, completed DPIAs, risk register",
+      "severity": "High",
+      "recommendation_text": "Screen new processing for DPIA triggers and complete assessments before go-live."
+    },
+    {
+      "requirement_code": "GDPR-37.1",
+      "category": "DPO",
+      "requirement_text": "A Data Protection Officer shall be designated where required by law or organizational practice.",
+      "keywords": ["DPO", "data protection officer", "privacy officer"],
+      "expected_evidence": "DPO appointment letter, contact details, independence documentation",
+      "severity": "Medium",
+      "recommendation_text": "Designate a DPO or privacy lead with published contact details and independence."
+    },
+    {
+      "requirement_code": "GDPR-28.1",
+      "category": "Processors",
+      "requirement_text": "Processing by a processor shall be governed by a contract with required Article 28 clauses.",
+      "keywords": ["DPA", "data processing agreement", "subprocessor", "vendor"],
+      "expected_evidence": "Signed DPAs, subprocessor list, vendor assessments",
+      "severity": "High",
+      "recommendation_text": "Execute Article 28 DPAs with all processors and maintain subprocessor register."
+    },
+    {
+      "requirement_code": "GDPR-44",
+      "category": "International Transfers",
+      "requirement_text": "Transfers of personal data outside the EEA shall only occur with appropriate safeguards.",
+      "keywords": ["international transfer", "SCCs", "adequacy", "cross-border"],
+      "expected_evidence": "Transfer impact assessments, SCCs, transfer register",
+      "severity": "High",
+      "recommendation_text": "Document all cross-border transfers with SCCs or adequacy decisions and TIAs."
+    },
+    {
+      "requirement_code": "GDPR-5.1.e",
+      "category": "Principles - Retention",
+      "requirement_text": "Personal data shall be kept in a form permitting identification for no longer than necessary.",
+      "keywords": ["retention", "data lifecycle", "deletion schedule"],
+      "expected_evidence": "Retention policy, automated deletion jobs, retention schedule",
+      "severity": "High",
+      "recommendation_text": "Define retention periods per data category and enforce via automated deletion."
+    }
+  ]
+}

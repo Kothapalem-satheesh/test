@@ -1,0 +1,215 @@
+{
+  "name": "SOC 2",
+  "description": "SOC 2 Trust Services Criteria (Optional) - Security, Availability, Confidentiality for service organizations",
+  "version": "2017",
+  "optional": true,
+  "requirements": [
+    {
+      "requirement_code": "CC1.1",
+      "category": "Common Criteria - Control Environment",
+      "requirement_text": "The entity demonstrates a commitment to integrity and ethical values.",
+      "keywords": ["code of conduct", "ethics", "integrity", "control environment"],
+      "expected_evidence": "Code of conduct, ethics policy, employee acknowledgment",
+      "severity": "High",
+      "recommendation_text": "Establish and communicate a code of conduct with ethics training for all personnel."
+    },
+    {
+      "requirement_code": "CC1.2",
+      "category": "Common Criteria - Board Oversight",
+      "requirement_text": "The board of directors demonstrates independence from management and exercises oversight of system controls.",
+      "keywords": ["board oversight", "governance", "independence"],
+      "expected_evidence": "Board charter, governance documentation, oversight meeting records",
+      "severity": "Medium",
+      "recommendation_text": "Document board/management oversight responsibilities for internal control over systems."
+    },
+    {
+      "requirement_code": "CC2.1",
+      "category": "Common Criteria - Communication",
+      "requirement_text": "The entity obtains or generates and uses relevant, quality information to support the functioning of internal control.",
+      "keywords": ["information quality", "internal communication", "control information"],
+      "expected_evidence": "Internal communication procedures, control documentation",
+      "severity": "Medium",
+      "recommendation_text": "Ensure quality security and operational information flows to those responsible for controls."
+    },
+    {
+      "requirement_code": "CC3.1",
+      "category": "Common Criteria - Risk Assessment",
+      "requirement_text": "The entity specifies objectives with sufficient clarity to enable the identification and assessment of risks.",
+      "keywords": ["risk assessment", "objectives", "risk identification"],
+      "expected_evidence": "Risk assessment documentation, security objectives",
+      "severity": "High",
+      "recommendation_text": "Define clear security objectives and conduct formal risk assessments annually."
+    },
+    {
+      "requirement_code": "CC3.2",
+      "category": "Common Criteria - Risk Assessment",
+      "requirement_text": "The entity identifies risks to the achievement of its objectives and analyzes risks as a basis for determining how to manage them.",
+      "keywords": ["risk analysis", "threat assessment", "risk register"],
+      "expected_evidence": "Risk register, risk analysis reports, threat modeling",
+      "severity": "High",
+      "recommendation_text": "Maintain a risk register with analyzed risks and treatment plans reviewed quarterly."
+    },
+    {
+      "requirement_code": "CC5.1",
+      "category": "Common Criteria - Control Activities",
+      "requirement_text": "The entity selects and develops control activities that contribute to the mitigation of risks.",
+      "keywords": ["control activities", "risk mitigation", "security controls"],
+      "expected_evidence": "Control matrix mapping risks to controls, control documentation",
+      "severity": "High",
+      "recommendation_text": "Map identified risks to specific control activities and verify effectiveness."
+    },
+    {
+      "requirement_code": "CC6.1",
+      "category": "Common Criteria - Logical Access",
+      "requirement_text": "The entity implements logical access security software, infrastructure, and architectures over protected information assets.",
+      "keywords": ["logical access", "access control", "authentication", "authorization"],
+      "expected_evidence": "Access control policy, IAM configuration, access review records",
+      "severity": "Critical",
+      "recommendation_text": "Implement comprehensive logical access controls with authentication and authorization."
+    },
+    {
+      "requirement_code": "CC6.2",
+      "category": "Common Criteria - User Registration",
+      "requirement_text": "Prior to issuing system credentials and granting system access, the entity registers and authorizes new users.",
+      "keywords": ["user provisioning", "access authorization", "onboarding"],
+      "expected_evidence": "User provisioning procedures, authorization records",
+      "severity": "High",
+      "recommendation_text": "Require formal authorization before granting system access to new users."
+    },
+    {
+      "requirement_code": "CC6.3",
+      "category": "Common Criteria - User Removal",
+      "requirement_text": "The entity removes access to protected information assets when appropriate.",
+      "keywords": ["deprovisioning", "access removal", "offboarding", "termination"],
+      "expected_evidence": "Offboarding procedures, access removal records, termination checklists",
+      "severity": "Critical",
+      "recommendation_text": "Revoke all system access promptly upon employee termination or role change."
+    },
+    {
+      "requirement_code": "CC6.6",
+      "category": "Common Criteria - Boundary Protection",
+      "requirement_text": "The entity implements logical access security measures to protect against threats from sources outside its system boundaries.",
+      "keywords": ["boundary protection", "firewall", "WAF", "network security"],
+      "expected_evidence": "Network security architecture, firewall/WAF configuration",
+      "severity": "Critical",
+      "recommendation_text": "Deploy perimeter security controls including firewalls and WAF to protect system boundaries."
+    },
+    {
+      "requirement_code": "CC6.7",
+      "category": "Common Criteria - Transmission Security",
+      "requirement_text": "The entity restricts the transmission, movement, and removal of information to authorized internal and external users and processes.",
+      "keywords": ["data transmission", "encryption in transit", "DLP", "data movement"],
+      "expected_evidence": "Data transmission policy, encryption configuration, DLP controls",
+      "severity": "High",
+      "recommendation_text": "Encrypt data in transit and restrict data movement to authorized channels."
+    },
+    {
+      "requirement_code": "CC6.8",
+      "category": "Common Criteria - Malware Prevention",
+      "requirement_text": "The entity implements controls to prevent or detect and act upon the introduction of unauthorized or malicious software.",
+      "keywords": ["malware prevention", "EDR", "anti-malware", "intrusion detection"],
+      "expected_evidence": "Anti-malware deployment, EDR configuration, detection logs",
+      "severity": "Critical",
+      "recommendation_text": "Deploy endpoint protection and intrusion detection across all production systems."
+    },
+    {
+      "requirement_code": "CC7.1",
+      "category": "Common Criteria - System Monitoring",
+      "requirement_text": "The entity uses detection and monitoring procedures to identify changes to configurations and new vulnerabilities.",
+      "keywords": ["configuration monitoring", "vulnerability detection", "change detection"],
+      "expected_evidence": "Configuration monitoring tools, vulnerability scanning, change detection alerts",
+      "severity": "High",
+      "recommendation_text": "Monitor system configurations and vulnerabilities with automated detection and alerting."
+    },
+    {
+      "requirement_code": "CC7.2",
+      "category": "Common Criteria - Anomaly Detection",
+      "requirement_text": "The entity monitors system components and the operation of controls to detect anomalies indicative of malicious acts or system failures.",
+      "keywords": ["anomaly detection", "SIEM", "security monitoring", "SOC"],
+      "expected_evidence": "SIEM configuration, monitoring dashboards, alert procedures",
+      "severity": "Critical",
+      "recommendation_text": "Implement continuous monitoring with SIEM to detect anomalies and security events."
+    },
+    {
+      "requirement_code": "CC7.3",
+      "category": "Common Criteria - Incident Response",
+      "requirement_text": "The entity evaluates security events to determine whether they could or have resulted in a failure of controls.",
+      "keywords": ["incident evaluation", "security events", "incident response"],
+      "expected_evidence": "Incident response procedures, event evaluation records",
+      "severity": "High",
+      "recommendation_text": "Establish procedures to evaluate security events and determine control impact."
+    },
+    {
+      "requirement_code": "CC7.4",
+      "category": "Common Criteria - Incident Response",
+      "requirement_text": "The entity responds to identified security incidents by executing a defined incident response program.",
+      "keywords": ["incident response", "IR program", "incident handling"],
+      "expected_evidence": "Incident response plan, incident records, post-incident reviews",
+      "severity": "Critical",
+      "recommendation_text": "Maintain and test an incident response program with defined roles and communication plans."
+    },
+    {
+      "requirement_code": "CC8.1",
+      "category": "Common Criteria - Change Management",
+      "requirement_text": "The entity authorizes, designs, develops, configures, documents, tests, approves, and implements changes to infrastructure and software.",
+      "keywords": ["change management", "CAB", "deployment process", "change control"],
+      "expected_evidence": "Change management policy, change records, CAB meeting minutes",
+      "severity": "High",
+      "recommendation_text": "Implement formal change management with authorization, testing, and approval before production deployment."
+    },
+    {
+      "requirement_code": "CC9.1",
+      "category": "Common Criteria - Risk Mitigation (Vendors)",
+      "requirement_text": "The entity identifies, selects, and develops risk mitigation activities for risks arising from vendor and business partner relationships.",
+      "keywords": ["vendor risk", "third party", "supplier management", "subservice organizations"],
+      "expected_evidence": "Vendor risk assessment, third-party management policy",
+      "severity": "High",
+      "recommendation_text": "Assess vendor security posture before engagement and monitor ongoing compliance."
+    },
+    {
+      "requirement_code": "A1.1",
+      "category": "Availability Criteria",
+      "requirement_text": "The entity maintains, monitors, and evaluates current processing capacity and use of system components to manage capacity demand.",
+      "keywords": ["capacity planning", "availability", "performance monitoring", "scalability"],
+      "expected_evidence": "Capacity planning documentation, performance monitoring dashboards",
+      "severity": "Medium",
+      "recommendation_text": "Monitor system capacity and plan for demand to maintain availability SLAs."
+    },
+    {
+      "requirement_code": "A1.2",
+      "category": "Availability Criteria",
+      "requirement_text": "The entity authorizes, designs, develops, implements, maintains, and monitors environmental protections, software, and recovery infrastructure.",
+      "keywords": ["disaster recovery", "backup", "high availability", "redundancy"],
+      "expected_evidence": "DR plan, backup procedures, HA architecture documentation",
+      "severity": "Critical",
+      "recommendation_text": "Implement DR/HA infrastructure with tested recovery procedures meeting availability commitments."
+    },
+    {
+      "requirement_code": "C1.1",
+      "category": "Confidentiality Criteria",
+      "requirement_text": "The entity identifies and maintains confidential information to meet the entity's objectives related to confidentiality.",
+      "keywords": ["confidentiality", "data classification", "confidential information"],
+      "expected_evidence": "Confidential data inventory, classification policy",
+      "severity": "High",
+      "recommendation_text": "Identify and classify all confidential information with appropriate handling requirements."
+    },
+    {
+      "requirement_code": "C1.2",
+      "category": "Confidentiality Criteria",
+      "requirement_text": "The entity disposes of confidential information to meet the entity's objectives related to confidentiality.",
+      "keywords": ["data disposal", "confidential data destruction", "secure deletion"],
+      "expected_evidence": "Data disposal procedures, destruction certificates",
+      "severity": "Medium",
+      "recommendation_text": "Implement secure disposal procedures for confidential information at end of retention."
+    },
+    {
+      "requirement_code": "PI1.1",
+      "category": "Processing Integrity Criteria",
+      "requirement_text": "The entity obtains or generates, uses, and communicates relevant, quality information regarding the processing of data.",
+      "keywords": ["processing integrity", "data quality", "data validation"],
+      "expected_evidence": "Data validation procedures, processing integrity controls",
+      "severity": "Medium",
+      "recommendation_text": "Implement data validation and quality checks throughout processing pipelines."
+    }
+  ]
+}

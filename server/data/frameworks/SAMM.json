@@ -1,0 +1,323 @@
+{
+  "name": "OWASP SAMM",
+  "description": "OWASP Software Assurance Maturity Model v2.0",
+  "version": "2.0",
+  "optional": false,
+  "requirements": [
+    {
+      "requirement_code": "G-SM-1-A",
+      "category": "Governance - Strategy & Metrics",
+      "requirement_text": "Understand drivers for application security and establish a strategic plan aligned with business objectives.",
+      "keywords": ["security strategy", "appsec program", "business alignment", "security metrics"],
+      "expected_evidence": "Application security strategy document, KPI definitions, executive sponsorship records",
+      "severity": "High",
+      "recommendation_text": "Develop an application security strategy aligned with business goals with defined KPIs and executive sponsorship."
+    },
+    {
+      "requirement_code": "G-SM-2-A",
+      "category": "Governance - Strategy & Metrics",
+      "requirement_text": "Measure and report application security metrics to track program effectiveness.",
+      "keywords": ["security metrics", "KPI", "reporting", "dashboard"],
+      "expected_evidence": "Security metrics dashboard, quarterly reporting records",
+      "severity": "Medium",
+      "recommendation_text": "Define and track application security KPIs with regular reporting to stakeholders."
+    },
+    {
+      "requirement_code": "G-SM-3-A",
+      "category": "Governance - Strategy & Metrics",
+      "requirement_text": "Classify data and applications based on business risk and regulatory requirements.",
+      "keywords": ["data classification", "application risk", "risk tiering"],
+      "expected_evidence": "Application inventory with risk tiers, data classification policy",
+      "severity": "High",
+      "recommendation_text": "Classify all applications by business criticality and apply proportional security controls."
+    },
+    {
+      "requirement_code": "G-PO-1-A",
+      "category": "Governance - Policy & Compliance",
+      "requirement_text": "Establish and maintain application security policies and standards.",
+      "keywords": ["security policy", "secure coding standards", "compliance"],
+      "expected_evidence": "Application security policy, secure coding standards documentation",
+      "severity": "Critical",
+      "recommendation_text": "Create comprehensive application security policies and secure coding standards reviewed annually."
+    },
+    {
+      "requirement_code": "G-PO-2-A",
+      "category": "Governance - Policy & Compliance",
+      "requirement_text": "Ensure compliance with relevant regulatory and industry requirements.",
+      "keywords": ["compliance", "regulatory", "GDPR", "PCI-DSS", "HIPAA"],
+      "expected_evidence": "Compliance mapping documentation, audit results, regulatory assessment",
+      "severity": "Critical",
+      "recommendation_text": "Map application security controls to applicable regulations and conduct periodic compliance assessments."
+    },
+    {
+      "requirement_code": "G-PO-3-A",
+      "category": "Governance - Policy & Compliance",
+      "requirement_text": "Define and enforce security requirements in vendor and third-party contracts.",
+      "keywords": ["vendor security", "third party", "contractual requirements"],
+      "expected_evidence": "Vendor security requirements in contracts, third-party assessment records",
+      "severity": "High",
+      "recommendation_text": "Include security requirements and right-to-audit clauses in all vendor contracts."
+    },
+    {
+      "requirement_code": "G-EG-1-A",
+      "category": "Governance - Education & Guidance",
+      "requirement_text": "Provide role-based application security training for all development team members.",
+      "keywords": ["security training", "developer education", "secure coding training"],
+      "expected_evidence": "Training program documentation, completion records, training materials",
+      "severity": "High",
+      "recommendation_text": "Implement role-based security training for developers, testers, and architects with annual refreshers."
+    },
+    {
+      "requirement_code": "G-EG-2-A",
+      "category": "Governance - Education & Guidance",
+      "requirement_text": "Provide security guidance and resources accessible to development teams.",
+      "keywords": ["security guidance", "knowledge base", "security champions"],
+      "expected_evidence": "Security knowledge base, security champion program documentation",
+      "severity": "Medium",
+      "recommendation_text": "Maintain a security knowledge base and establish a security champion program within development teams."
+    },
+    {
+      "requirement_code": "D-SR-1-A",
+      "category": "Design - Security Requirements",
+      "requirement_text": "Derive security requirements from business functionality and risk analysis.",
+      "keywords": ["security requirements", "threat modeling", "risk analysis"],
+      "expected_evidence": "Security requirements documentation, threat model outputs",
+      "severity": "Critical",
+      "recommendation_text": "Derive explicit security requirements from threat models and risk assessments for each project."
+    },
+    {
+      "requirement_code": "D-SR-2-A",
+      "category": "Design - Security Requirements",
+      "requirement_text": "Review security requirements and design against security best practices.",
+      "keywords": ["design review", "security architecture review", "threat modeling"],
+      "expected_evidence": "Security design review records, architecture review checklist",
+      "severity": "High",
+      "recommendation_text": "Conduct security design reviews for all new features and major changes before implementation."
+    },
+    {
+      "requirement_code": "D-SR-3-A",
+      "category": "Design - Security Requirements",
+      "requirement_text": "Perform threat modeling to identify and mitigate design-level security risks.",
+      "keywords": ["threat modeling", "STRIDE", "attack trees", "risk mitigation"],
+      "expected_evidence": "Threat model documents, threat modeling workshop records",
+      "severity": "Critical",
+      "recommendation_text": "Perform STRIDE-based threat modeling for all applications and significant feature changes."
+    },
+    {
+      "requirement_code": "D-TA-1-A",
+      "category": "Design - Security Architecture",
+      "requirement_text": "Maintain an accurate and up-to-date application security architecture.",
+      "keywords": ["security architecture", "architecture documentation", "trust boundaries"],
+      "expected_evidence": "Security architecture diagrams, trust boundary documentation",
+      "severity": "High",
+      "recommendation_text": "Document security architecture including trust boundaries, data flows, and security controls."
+    },
+    {
+      "requirement_code": "D-TA-2-A",
+      "category": "Design - Security Architecture",
+      "requirement_text": "Evaluate and select security technologies and frameworks appropriate for the application.",
+      "keywords": ["security technology", "framework selection", "security controls"],
+      "expected_evidence": "Technology evaluation records, security framework adoption documentation",
+      "severity": "Medium",
+      "recommendation_text": "Evaluate and document security technology choices with justification based on application requirements."
+    },
+    {
+      "requirement_code": "I-SB-1-A",
+      "category": "Implementation - Secure Build",
+      "requirement_text": "Use a secure and repeatable build process with integrity verification.",
+      "keywords": ["secure build", "CI/CD", "build integrity", "artifact signing"],
+      "expected_evidence": "CI/CD pipeline security configuration, build integrity verification",
+      "severity": "High",
+      "recommendation_text": "Implement signed and verified build artifacts with immutable deployment pipelines."
+    },
+    {
+      "requirement_code": "I-SB-2-A",
+      "category": "Implementation - Secure Build",
+      "requirement_text": "Manage dependencies and third-party libraries with known vulnerability tracking.",
+      "keywords": ["dependency management", "SCA", "vulnerable libraries", "SBOM"],
+      "expected_evidence": "Dependency scanning results, SBOM documentation, library update procedures",
+      "severity": "Critical",
+      "recommendation_text": "Scan dependencies for known vulnerabilities and maintain a Software Bill of Materials (SBOM)."
+    },
+    {
+      "requirement_code": "I-SB-3-A",
+      "category": "Implementation - Secure Build",
+      "requirement_text": "Enforce secure coding standards through automated and manual review processes.",
+      "keywords": ["secure coding", "code review", "SAST", "coding standards"],
+      "expected_evidence": "Secure coding standards, SAST tool results, code review records",
+      "severity": "Critical",
+      "recommendation_text": "Integrate SAST into CI/CD and require security-focused code reviews for all changes."
+    },
+    {
+      "requirement_code": "I-DM-1-A",
+      "category": "Implementation - Defect Management",
+      "requirement_text": "Track and manage security defects through a defined lifecycle.",
+      "keywords": ["defect management", "vulnerability tracking", "remediation SLA"],
+      "expected_evidence": "Defect tracking process, remediation SLA documentation, defect metrics",
+      "severity": "High",
+      "recommendation_text": "Track security defects in a centralized system with defined remediation SLAs by severity."
+    },
+    {
+      "requirement_code": "I-DM-2-A",
+      "category": "Implementation - Defect Management",
+      "requirement_text": "Classify and prioritize security defects based on risk and business impact.",
+      "keywords": ["risk prioritization", "CVSS", "defect classification"],
+      "expected_evidence": "Defect classification criteria, risk-based prioritization documentation",
+      "severity": "High",
+      "recommendation_text": "Classify vulnerabilities using CVSS and prioritize remediation based on exploitability and business impact."
+    },
+    {
+      "requirement_code": "I-DM-3-A",
+      "category": "Implementation - Defect Management",
+      "requirement_text": "Analyze root causes of security defects to prevent recurrence.",
+      "keywords": ["root cause analysis", "defect trends", "continuous improvement"],
+      "expected_evidence": "Root cause analysis records, defect trend reports",
+      "severity": "Medium",
+      "recommendation_text": "Perform root cause analysis on recurring security defects and implement preventive measures."
+    },
+    {
+      "requirement_code": "V-ST-1-A",
+      "category": "Verification - Security Testing",
+      "requirement_text": "Perform security testing aligned with the application's risk profile.",
+      "keywords": ["security testing", "penetration testing", "DAST", "security test plan"],
+      "expected_evidence": "Security test plan, penetration test reports, DAST scan results",
+      "severity": "Critical",
+      "recommendation_text": "Conduct security testing proportional to application risk including SAST, DAST, and periodic penetration tests."
+    },
+    {
+      "requirement_code": "V-ST-2-A",
+      "category": "Verification - Security Testing",
+      "requirement_text": "Automate security testing in the CI/CD pipeline.",
+      "keywords": ["automated testing", "CI/CD security", "DAST automation"],
+      "expected_evidence": "Automated security testing in CI/CD, test automation configuration",
+      "severity": "High",
+      "recommendation_text": "Integrate automated security testing (SAST, DAST, SCA) into every CI/CD pipeline run."
+    },
+    {
+      "requirement_code": "V-ST-3-A",
+      "category": "Verification - Security Testing",
+      "requirement_text": "Perform manual security testing for complex vulnerabilities not caught by automation.",
+      "keywords": ["manual testing", "penetration testing", "business logic testing"],
+      "expected_evidence": "Manual test plans, penetration test reports, business logic test results",
+      "severity": "High",
+      "recommendation_text": "Supplement automated testing with manual penetration testing and business logic testing annually."
+    },
+    {
+      "requirement_code": "V-RT-1-A",
+      "category": "Verification - Requirements Testing",
+      "requirement_text": "Verify that security requirements are implemented and tested.",
+      "keywords": ["requirements testing", "security verification", "test coverage"],
+      "expected_evidence": "Security requirements test cases, verification test results",
+      "severity": "High",
+      "recommendation_text": "Create test cases for each security requirement and verify implementation before release."
+    },
+    {
+      "requirement_code": "V-RT-2-A",
+      "category": "Verification - Requirements Testing",
+      "requirement_text": "Test security controls for effectiveness against defined threat scenarios.",
+      "keywords": ["control testing", "threat scenarios", "security validation"],
+      "expected_evidence": "Threat scenario test cases, control effectiveness test results",
+      "severity": "High",
+      "recommendation_text": "Test security controls against defined threat scenarios from threat models."
+    },
+    {
+      "requirement_code": "O-EM-1-A",
+      "category": "Operations - Environment Management",
+      "requirement_text": "Maintain secure configurations for all application environments.",
+      "keywords": ["configuration management", "hardening", "environment security"],
+      "expected_evidence": "Environment hardening standards, configuration baseline documentation",
+      "severity": "High",
+      "recommendation_text": "Apply security hardening baselines to all environments and monitor for configuration drift."
+    },
+    {
+      "requirement_code": "O-EM-2-A",
+      "category": "Operations - Environment Management",
+      "requirement_text": "Manage secrets and credentials securely across all environments.",
+      "keywords": ["secrets management", "credential management", "vault", "key management"],
+      "expected_evidence": "Secrets management solution documentation, credential rotation procedures",
+      "severity": "Critical",
+      "recommendation_text": "Use a dedicated secrets management solution with automated rotation and audit logging."
+    },
+    {
+      "requirement_code": "O-EM-3-A",
+      "category": "Operations - Environment Management",
+      "requirement_text": "Implement monitoring and alerting for security events in production.",
+      "keywords": ["security monitoring", "alerting", "SIEM", "runtime protection"],
+      "expected_evidence": "Security monitoring configuration, alert rules, incident detection records",
+      "severity": "Critical",
+      "recommendation_text": "Deploy runtime application self-protection (RASP) and security monitoring with real-time alerting."
+    },
+    {
+      "requirement_code": "O-IM-1-A",
+      "category": "Operations - Incident Management",
+      "requirement_text": "Establish an incident response process for application security incidents.",
+      "keywords": ["incident response", "security incident", "IR playbook"],
+      "expected_evidence": "Application security incident response plan, playbooks, tabletop exercise records",
+      "severity": "Critical",
+      "recommendation_text": "Develop application-specific incident response playbooks and conduct regular exercises."
+    },
+    {
+      "requirement_code": "O-IM-2-A",
+      "category": "Operations - Incident Management",
+      "requirement_text": "Conduct post-incident reviews and implement improvements.",
+      "keywords": ["post-incident review", "lessons learned", "improvement"],
+      "expected_evidence": "Post-incident review reports, improvement action items",
+      "severity": "Medium",
+      "recommendation_text": "Conduct blameless post-incident reviews and track improvement actions to completion."
+    },
+    {
+      "requirement_code": "O-IM-3-A",
+      "category": "Operations - Incident Management",
+      "requirement_text": "Maintain communication plans for security incident disclosure.",
+      "keywords": ["incident communication", "disclosure", "breach notification"],
+      "expected_evidence": "Incident communication plan, breach notification procedures",
+      "severity": "High",
+      "recommendation_text": "Define incident communication and breach notification procedures compliant with regulatory requirements."
+    },
+    {
+      "requirement_code": "G-SM-1-B",
+      "category": "Governance - Strategy & Metrics (Level 2)",
+      "requirement_text": "Establish a formal application security program with dedicated resources and budget.",
+      "keywords": ["appsec program", "dedicated resources", "budget allocation"],
+      "expected_evidence": "AppSec program charter, team structure, budget documentation",
+      "severity": "High",
+      "recommendation_text": "Establish a dedicated application security team with defined roles, responsibilities, and budget."
+    },
+    {
+      "requirement_code": "D-SR-1-B",
+      "category": "Design - Security Requirements (Level 2)",
+      "requirement_text": "Integrate security requirements into the standard development workflow and tooling.",
+      "keywords": ["workflow integration", "security requirements", "JIRA", "requirements traceability"],
+      "expected_evidence": "Security requirements in project management tools, traceability matrix",
+      "severity": "High",
+      "recommendation_text": "Integrate security requirements as first-class items in project management with traceability to tests."
+    },
+    {
+      "requirement_code": "I-SB-1-B",
+      "category": "Implementation - Secure Build (Level 2)",
+      "requirement_text": "Implement security gates in the CI/CD pipeline that block deployment on critical findings.",
+      "keywords": ["security gates", "CI/CD blocking", "quality gate"],
+      "expected_evidence": "CI/CD security gate configuration, blocking criteria documentation",
+      "severity": "Critical",
+      "recommendation_text": "Configure CI/CD pipelines to block deployments when critical or high security findings are detected."
+    },
+    {
+      "requirement_code": "V-ST-1-B",
+      "category": "Verification - Security Testing (Level 2)",
+      "requirement_text": "Conduct regular penetration testing by qualified internal or external testers.",
+      "keywords": ["penetration testing", "red team", "security assessment"],
+      "expected_evidence": "Penetration test reports, tester qualifications, remediation tracking",
+      "severity": "Critical",
+      "recommendation_text": "Engage qualified penetration testers annually with remediation tracking for all findings."
+    },
+    {
+      "requirement_code": "O-EM-1-B",
+      "category": "Operations - Environment Management (Level 2)",
+      "requirement_text": "Implement infrastructure as code with security configuration validation.",
+      "keywords": ["IaC", "infrastructure as code", "configuration validation", "Terraform"],
+      "expected_evidence": "IaC security scanning results, infrastructure security standards",
+      "severity": "High",
+      "recommendation_text": "Use infrastructure as code with automated security configuration validation before deployment."
+    }
+  ]
+}

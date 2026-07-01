@@ -1,0 +1,197 @@
+{
+  "name": "PCI DSS",
+  "description": "Payment Card Industry Data Security Standard v4.0 (Optional) - for organizations handling cardholder data",
+  "version": "4.0",
+  "optional": true,
+  "requirements": [
+    {
+      "requirement_code": "PCI-1.1",
+      "category": "Requirement 1 - Network Security Controls",
+      "requirement_text": "Network security controls (NSCs) are defined and implemented to protect the cardholder data environment (CDE).",
+      "keywords": ["firewall", "network segmentation", "CDE", "NSC"],
+      "expected_evidence": "Network diagram with CDE boundaries, firewall rule documentation",
+      "severity": "Critical",
+      "recommendation_text": "Define and document CDE boundaries with firewall rules restricting traffic to only necessary services."
+    },
+    {
+      "requirement_code": "PCI-1.2",
+      "category": "Requirement 1 - Network Security Controls",
+      "requirement_text": "Network security controls are configured to restrict inbound and outbound traffic to the CDE.",
+      "keywords": ["firewall rules", "traffic restriction", "CDE access"],
+      "expected_evidence": "Firewall configuration standards, rule review records",
+      "severity": "Critical",
+      "recommendation_text": "Implement deny-all default firewall rules with explicit allow rules for required CDE traffic only."
+    },
+    {
+      "requirement_code": "PCI-2.1",
+      "category": "Requirement 2 - Secure Configurations",
+      "requirement_text": "Configuration standards are developed, implemented, and maintained for all system components.",
+      "keywords": ["secure configuration", "hardening", "configuration standards"],
+      "expected_evidence": "Configuration standards, hardening guides, configuration audit results",
+      "severity": "High",
+      "recommendation_text": "Develop PCI-compliant configuration standards and verify compliance through regular audits."
+    },
+    {
+      "requirement_code": "PCI-2.2",
+      "category": "Requirement 2 - Secure Configurations",
+      "requirement_text": "Vendor default accounts and passwords are changed or removed before systems are placed on the network.",
+      "keywords": ["default passwords", "vendor defaults", "account hardening"],
+      "expected_evidence": "Default account removal records, password change verification",
+      "severity": "Critical",
+      "recommendation_text": "Change or disable all vendor default credentials before deploying systems to production."
+    },
+    {
+      "requirement_code": "PCI-3.1",
+      "category": "Requirement 3 - Protect Stored Account Data",
+      "requirement_text": "Account data storage is kept to a minimum with defined retention and disposal procedures.",
+      "keywords": ["data retention", "cardholder data", "data minimization", "PAN storage"],
+      "expected_evidence": "Data retention policy, data flow diagram, PAN storage inventory",
+      "severity": "Critical",
+      "recommendation_text": "Minimize stored cardholder data, define retention limits, and implement secure disposal procedures."
+    },
+    {
+      "requirement_code": "PCI-3.2",
+      "category": "Requirement 3 - Protect Stored Account Data",
+      "requirement_text": "Sensitive authentication data (SAD) is not stored after authorization.",
+      "keywords": ["SAD", "CVV", "PIN", "track data", "sensitive authentication data"],
+      "expected_evidence": "Data storage audit confirming no SAD retention, application configuration",
+      "severity": "Critical",
+      "recommendation_text": "Ensure CVV, full track data, and PIN blocks are never stored post-authorization."
+    },
+    {
+      "requirement_code": "PCI-3.3",
+      "category": "Requirement 3 - Protect Stored Account Data",
+      "requirement_text": "PAN is rendered unreadable anywhere it is stored using strong cryptography or truncation.",
+      "keywords": ["PAN encryption", "tokenization", "hashing", "truncation"],
+      "expected_evidence": "Encryption/tokenization implementation, key management documentation",
+      "severity": "Critical",
+      "recommendation_text": "Encrypt or tokenize all stored PAN using PCI-approved methods with proper key management."
+    },
+    {
+      "requirement_code": "PCI-4.1",
+      "category": "Requirement 4 - Protect Data in Transit",
+      "requirement_text": "Strong cryptography and security protocols are used to safeguard PAN during transmission over open, public networks.",
+      "keywords": ["TLS", "PAN transmission", "encryption in transit", "HTTPS"],
+      "expected_evidence": "TLS configuration, certificate management, network transmission encryption",
+      "severity": "Critical",
+      "recommendation_text": "Enforce TLS 1.2+ for all PAN transmission with strong cipher suites and valid certificates."
+    },
+    {
+      "requirement_code": "PCI-5.1",
+      "category": "Requirement 5 - Malware Protection",
+      "requirement_text": "Anti-malware solutions are deployed on all system components except those specifically confirmed as not at risk.",
+      "keywords": ["anti-malware", "antivirus", "malware protection", "EDR"],
+      "expected_evidence": "Anti-malware deployment records, scan schedules, detection logs",
+      "severity": "High",
+      "recommendation_text": "Deploy anti-malware on all CDE systems with automatic updates and regular scanning."
+    },
+    {
+      "requirement_code": "PCI-6.1",
+      "category": "Requirement 6 - Secure Systems and Software",
+      "requirement_text": "Security vulnerabilities are identified and addressed through secure development practices and patch management.",
+      "keywords": ["vulnerability management", "patch management", "secure development"],
+      "expected_evidence": "Vulnerability management policy, patch records, secure SDLC documentation",
+      "severity": "Critical",
+      "recommendation_text": "Establish vulnerability identification and patching SLAs for all CDE system components."
+    },
+    {
+      "requirement_code": "PCI-6.2",
+      "category": "Requirement 6 - Secure Systems and Software",
+      "requirement_text": "Bespoke and custom software is developed securely following PCI DSS and industry best practices.",
+      "keywords": ["secure coding", "custom software", "OWASP", "code review"],
+      "expected_evidence": "Secure coding standards, code review records, SAST/DAST results",
+      "severity": "High",
+      "recommendation_text": "Apply secure coding practices and security testing to all custom payment applications."
+    },
+    {
+      "requirement_code": "PCI-7.1",
+      "category": "Requirement 7 - Restrict Access",
+      "requirement_text": "Access to system components and cardholder data is limited to only those individuals whose job requires such access.",
+      "keywords": ["least privilege", "need to know", "access control", "CDE access"],
+      "expected_evidence": "Access control policy, role-based access matrix, access reviews",
+      "severity": "Critical",
+      "recommendation_text": "Implement least-privilege access to CDE with quarterly access reviews."
+    },
+    {
+      "requirement_code": "PCI-8.1",
+      "category": "Requirement 8 - Identify Users and Authenticate Access",
+      "requirement_text": "Processes and mechanisms for identifying users and authenticating access to system components are defined and documented.",
+      "keywords": ["user identification", "authentication", "unique IDs"],
+      "expected_evidence": "Authentication policy, unique user ID assignment procedures",
+      "severity": "Critical",
+      "recommendation_text": "Assign unique IDs to all users and define authentication requirements for CDE access."
+    },
+    {
+      "requirement_code": "PCI-8.2",
+      "category": "Requirement 8 - Authentication",
+      "requirement_text": "Multi-factor authentication is implemented for all access into the CDE.",
+      "keywords": ["MFA", "CDE access", "multi-factor authentication"],
+      "expected_evidence": "MFA deployment for CDE access, authentication configuration",
+      "severity": "Critical",
+      "recommendation_text": "Require MFA for all personnel accessing the cardholder data environment."
+    },
+    {
+      "requirement_code": "PCI-9.1",
+      "category": "Requirement 9 - Physical Access",
+      "requirement_text": "Physical access controls limit and monitor physical access to systems in the CDE.",
+      "keywords": ["physical access", "data center security", "badge access"],
+      "expected_evidence": "Physical access policy, access logs, visitor management procedures",
+      "severity": "High",
+      "recommendation_text": "Implement physical access controls with logging for all CDE locations."
+    },
+    {
+      "requirement_code": "PCI-10.1",
+      "category": "Requirement 10 - Logging and Monitoring",
+      "requirement_text": "Audit logs are enabled and active for all system components and cardholder data.",
+      "keywords": ["audit logging", "CDE monitoring", "log management"],
+      "expected_evidence": "Logging configuration for CDE systems, log retention policy",
+      "severity": "Critical",
+      "recommendation_text": "Enable comprehensive audit logging on all CDE components with minimum 12-month retention."
+    },
+    {
+      "requirement_code": "PCI-10.2",
+      "category": "Requirement 10 - Logging and Monitoring",
+      "requirement_text": "Audit logs capture all individual access to cardholder data and all actions by privileged users.",
+      "keywords": ["access logging", "privileged user monitoring", "cardholder data access"],
+      "expected_evidence": "Log content verification, privileged access monitoring",
+      "severity": "Critical",
+      "recommendation_text": "Configure logs to capture all cardholder data access and privileged user actions."
+    },
+    {
+      "requirement_code": "PCI-11.1",
+      "category": "Requirement 11 - Security Testing",
+      "requirement_text": "Wireless access points are identified and tested for unauthorized devices at least quarterly.",
+      "keywords": ["wireless scanning", "rogue AP detection", "wireless security"],
+      "expected_evidence": "Wireless scan results, rogue AP detection procedures",
+      "severity": "Medium",
+      "recommendation_text": "Scan for unauthorized wireless access points quarterly in and around the CDE."
+    },
+    {
+      "requirement_code": "PCI-11.2",
+      "category": "Requirement 11 - Security Testing",
+      "requirement_text": "Internal and external vulnerability scans are performed at least quarterly and after significant changes.",
+      "keywords": ["vulnerability scanning", "ASV scan", "quarterly scans"],
+      "expected_evidence": "Quarterly scan reports, ASV scan results, remediation records",
+      "severity": "Critical",
+      "recommendation_text": "Perform quarterly internal and external vulnerability scans with passing ASV scans."
+    },
+    {
+      "requirement_code": "PCI-11.3",
+      "category": "Requirement 11 - Security Testing",
+      "requirement_text": "External and internal penetration testing is performed at least annually and after significant changes.",
+      "keywords": ["penetration testing", "annual pentest", "CDE testing"],
+      "expected_evidence": "Penetration test reports, remediation tracking",
+      "severity": "Critical",
+      "recommendation_text": "Conduct annual penetration tests covering CDE with remediation of all critical findings."
+    },
+    {
+      "requirement_code": "PCI-12.1",
+      "category": "Requirement 12 - Information Security Policy",
+      "requirement_text": "An information security policy is established, published, maintained, and disseminated to all relevant personnel.",
+      "keywords": ["information security policy", "PCI policy", "security program"],
+      "expected_evidence": "Information security policy, annual review records, employee acknowledgment",
+      "severity": "High",
+      "recommendation_text": "Maintain a PCI-aligned information security policy reviewed annually and acknowledged by personnel."
+    }
+  ]
+}

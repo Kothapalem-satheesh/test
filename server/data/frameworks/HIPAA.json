@@ -1,0 +1,170 @@
+{
+  "name": "HIPAA",
+  "description": "HIPAA Security Rule — administrative, physical, and technical safeguards for ePHI",
+  "version": "45 CFR Part 164",
+  "optional": true,
+  "requirements": [
+    {
+      "requirement_code": "HIPAA-164.308.a1",
+      "category": "Administrative - Security Management",
+      "requirement_text": "Implement policies and procedures to prevent, detect, contain, and correct security violations (Security Management Process).",
+      "keywords": ["security management", "risk analysis", "sanction policy", "HIPAA"],
+      "expected_evidence": "Security policies, risk analysis, sanction policy",
+      "severity": "Critical",
+      "recommendation_text": "Establish a formal security management program with documented risk analysis and sanction policy."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a3",
+      "category": "Administrative - Workforce Security",
+      "requirement_text": "Implement policies and procedures to ensure workforce members have appropriate access to ePHI and prevent unauthorized access.",
+      "keywords": ["workforce security", "authorization", "supervision", "termination"],
+      "expected_evidence": "Access authorization procedures, termination checklist, role definitions",
+      "severity": "Critical",
+      "recommendation_text": "Document workforce authorization, supervision, and termination procedures for ePHI access."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a4",
+      "category": "Administrative - Information Access",
+      "requirement_text": "Implement policies and procedures for authorizing access to ePHI based on user role and minimum necessary.",
+      "keywords": ["information access management", "minimum necessary", "role-based access"],
+      "expected_evidence": "Access control policy, role matrix, provisioning procedures",
+      "severity": "Critical",
+      "recommendation_text": "Implement role-based access with minimum necessary principle for all ePHI systems."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a5",
+      "category": "Administrative - Security Awareness",
+      "requirement_text": "Implement a security awareness and training program for all workforce members.",
+      "keywords": ["security training", "awareness", "phishing", "HIPAA training"],
+      "expected_evidence": "Training program, completion records, annual training schedule",
+      "severity": "High",
+      "recommendation_text": "Deliver annual HIPAA security awareness training with documented completion tracking."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a6",
+      "category": "Administrative - Incident Procedures",
+      "requirement_text": "Implement policies and procedures to address security incidents including identification, response, and mitigation.",
+      "keywords": ["incident response", "security incident", "breach", "ePHI"],
+      "expected_evidence": "Incident response plan, incident log, breach notification procedures",
+      "severity": "Critical",
+      "recommendation_text": "Maintain HIPAA incident response procedures including breach assessment and notification."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a7",
+      "category": "Administrative - Contingency Plan",
+      "requirement_text": "Establish policies and procedures for responding to emergencies that damage systems containing ePHI.",
+      "keywords": ["contingency plan", "disaster recovery", "backup", "emergency mode"],
+      "expected_evidence": "Contingency plan, DR tests, backup procedures, emergency access",
+      "severity": "Critical",
+      "recommendation_text": "Document and test contingency plans including data backup, DR, and emergency mode operations."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.b1",
+      "category": "Administrative - Evaluation",
+      "requirement_text": "Perform periodic technical and nontechnical evaluations of security policies and controls.",
+      "keywords": ["security evaluation", "periodic review", "audit", "assessment"],
+      "expected_evidence": "Annual security evaluation reports, audit findings, remediation tracking",
+      "severity": "High",
+      "recommendation_text": "Conduct annual evaluations of HIPAA safeguards with documented remediation."
+    },
+    {
+      "requirement_code": "HIPAA-164.310.a1",
+      "category": "Physical - Facility Access",
+      "requirement_text": "Implement policies and procedures to limit physical access to facilities and systems containing ePHI.",
+      "keywords": ["facility access", "physical security", "data center", "badge"],
+      "expected_evidence": "Physical access policy, visitor logs, facility controls",
+      "severity": "High",
+      "recommendation_text": "Control physical access to ePHI systems with badges, logs, and visitor procedures."
+    },
+    {
+      "requirement_code": "HIPAA-164.310.d1",
+      "category": "Physical - Device and Media",
+      "requirement_text": "Implement policies governing receipt, movement, and disposal of hardware and media containing ePHI.",
+      "keywords": ["media disposal", "device controls", "hard drive", "sanitization"],
+      "expected_evidence": "Media disposal policy, destruction certificates, asset tracking",
+      "severity": "High",
+      "recommendation_text": "Define secure media disposal with certificates of destruction for ePHI media."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.a1",
+      "category": "Technical - Access Control",
+      "requirement_text": "Implement technical policies and procedures allowing only authorized access to ePHI.",
+      "keywords": ["access control", "unique user ID", "automatic logoff", "encryption"],
+      "expected_evidence": "Technical access controls, unique IDs, session timeout configuration",
+      "severity": "Critical",
+      "recommendation_text": "Enforce unique user identification, emergency access, automatic logoff, and encryption."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.b",
+      "category": "Technical - Audit Controls",
+      "requirement_text": "Implement hardware, software, and procedural mechanisms to record and examine activity in ePHI systems.",
+      "keywords": ["audit controls", "audit logs", "ePHI access logging"],
+      "expected_evidence": "Audit logging policy, log retention, SIEM configuration",
+      "severity": "Critical",
+      "recommendation_text": "Enable comprehensive audit logging for all ePHI access with retention and review."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.c1",
+      "category": "Technical - Integrity",
+      "requirement_text": "Implement policies and procedures to protect ePHI from improper alteration or destruction.",
+      "keywords": ["integrity", "checksum", "tamper protection", "ePHI"],
+      "expected_evidence": "Integrity controls documentation, change management, hashing",
+      "severity": "High",
+      "recommendation_text": "Protect ePHI integrity with change controls and tamper detection mechanisms."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.d",
+      "category": "Technical - Authentication",
+      "requirement_text": "Implement procedures to verify that persons or entities seeking access to ePHI are who they claim to be.",
+      "keywords": ["authentication", "MFA", "password policy", "identity verification"],
+      "expected_evidence": "Authentication policy, MFA enforcement, password standards",
+      "severity": "Critical",
+      "recommendation_text": "Require MFA for remote and privileged access to ePHI systems."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.e1",
+      "category": "Technical - Transmission Security",
+      "requirement_text": "Implement technical security measures to guard against unauthorized access to ePHI transmitted over networks.",
+      "keywords": ["transmission security", "TLS", "encryption in transit", "VPN"],
+      "expected_evidence": "Encryption standards, TLS configuration, VPN policy",
+      "severity": "Critical",
+      "recommendation_text": "Encrypt all ePHI in transit using TLS 1.2+ and secure VPN for remote access."
+    },
+    {
+      "requirement_code": "HIPAA-164.314.a1",
+      "category": "Organizational - Business Associates",
+      "requirement_text": "Covered entities shall have contracts or agreements with business associates ensuring appropriate safeguards.",
+      "keywords": ["BAA", "business associate agreement", "vendor", "third party"],
+      "expected_evidence": "Signed BAAs, vendor risk assessments, BA register",
+      "severity": "Critical",
+      "recommendation_text": "Execute BAAs with all business associates before sharing ePHI."
+    },
+    {
+      "requirement_code": "HIPAA-164.316.b1",
+      "category": "Policies and Documentation",
+      "requirement_text": "Maintain written policies and procedures and documentation of required actions, activities, and assessments for six years.",
+      "keywords": ["documentation", "policy retention", "six years", "records"],
+      "expected_evidence": "Policy repository, version control, retention schedule",
+      "severity": "Medium",
+      "recommendation_text": "Maintain HIPAA documentation with version control and 6-year retention."
+    },
+    {
+      "requirement_code": "HIPAA-164.308.a2",
+      "category": "Administrative - Risk Analysis",
+      "requirement_text": "Conduct an accurate and thorough assessment of potential risks and vulnerabilities to the confidentiality, integrity, and availability of ePHI.",
+      "keywords": ["risk analysis", "risk assessment", "vulnerability", "ePHI"],
+      "expected_evidence": "Risk analysis report, risk register, remediation plan",
+      "severity": "Critical",
+      "recommendation_text": "Perform comprehensive HIPAA risk analysis annually and after significant changes."
+    },
+    {
+      "requirement_code": "HIPAA-164.312.a2",
+      "category": "Technical - Encryption",
+      "requirement_text": "Implement a mechanism to encrypt and decrypt ePHI where reasonable and appropriate (addressable).",
+      "keywords": ["encryption at rest", "ePHI encryption", "AES", "key management"],
+      "expected_evidence": "Encryption policy, at-rest encryption configuration, key management",
+      "severity": "High",
+      "recommendation_text": "Encrypt ePHI at rest on all systems storing PHI with documented key management."
+    }
+  ]
+}

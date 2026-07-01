@@ -1,0 +1,224 @@
+{
+  "name": "CIS Controls",
+  "description": "CIS Critical Security Controls v8 - prioritized cyber defense best practices",
+  "version": "8.0",
+  "optional": false,
+  "requirements": [
+    {
+      "requirement_code": "CIS-1.1",
+      "category": "CIS 1 - Inventory and Control of Enterprise Assets",
+      "requirement_text": "Establish and maintain an accurate, detailed, and up-to-date inventory of all enterprise assets.",
+      "keywords": ["asset inventory", "CMDB", "hardware inventory", "device management"],
+      "expected_evidence": "Asset inventory, CMDB records, discovery scan results",
+      "severity": "High",
+      "recommendation_text": "Deploy automated asset discovery and maintain a centralized asset inventory updated at least monthly."
+    },
+    {
+      "requirement_code": "CIS-2.1",
+      "category": "CIS 2 - Inventory and Control of Software Assets",
+      "requirement_text": "Establish and maintain a detailed inventory of all licensed software installed on enterprise assets.",
+      "keywords": ["software inventory", "license management", "application catalog"],
+      "expected_evidence": "Software asset inventory, license compliance records",
+      "severity": "High",
+      "recommendation_text": "Implement software asset management to track all installed applications and versions."
+    },
+    {
+      "requirement_code": "CIS-3.1",
+      "category": "CIS 3 - Data Protection",
+      "requirement_text": "Establish and maintain a data management process to identify, classify, and document sensitive data.",
+      "keywords": ["data classification", "data inventory", "sensitive data", "DLP"],
+      "expected_evidence": "Data classification policy, data inventory, labeling procedures",
+      "severity": "Critical",
+      "recommendation_text": "Classify all data by sensitivity and implement handling requirements per classification level."
+    },
+    {
+      "requirement_code": "CIS-3.2",
+      "category": "CIS 3 - Data Protection",
+      "requirement_text": "Encrypt sensitive data at rest on servers, applications, and databases.",
+      "keywords": ["encryption at rest", "database encryption", "disk encryption"],
+      "expected_evidence": "Encryption policy, encryption implementation for databases and storage",
+      "severity": "Critical",
+      "recommendation_text": "Enable AES-256 encryption for all sensitive data at rest including databases, file systems, and backups."
+    },
+    {
+      "requirement_code": "CIS-3.3",
+      "category": "CIS 3 - Data Protection",
+      "requirement_text": "Encrypt sensitive data in transit using approved cryptographic protocols.",
+      "keywords": ["TLS", "encryption in transit", "HTTPS"],
+      "expected_evidence": "TLS configuration standards, certificate management",
+      "severity": "Critical",
+      "recommendation_text": "Enforce TLS 1.2+ on all data transmission channels."
+    },
+    {
+      "requirement_code": "CIS-4.1",
+      "category": "CIS 4 - Secure Configuration",
+      "requirement_text": "Establish and maintain a secure configuration process for enterprise assets and software.",
+      "keywords": ["secure configuration", "hardening", "CIS benchmarks", "baseline"],
+      "expected_evidence": "Configuration baselines, hardening guides, compliance scan results",
+      "severity": "High",
+      "recommendation_text": "Define and enforce secure configuration baselines based on CIS Benchmarks for all systems."
+    },
+    {
+      "requirement_code": "CIS-5.1",
+      "category": "CIS 5 - Account Management",
+      "requirement_text": "Establish and maintain an inventory of all accounts managed in the organization.",
+      "keywords": ["account inventory", "identity management", "user accounts"],
+      "expected_evidence": "Account inventory, IAM system records",
+      "severity": "High",
+      "recommendation_text": "Maintain centralized inventory of all user and service accounts with ownership and purpose."
+    },
+    {
+      "requirement_code": "CIS-5.2",
+      "category": "CIS 5 - Account Management",
+      "requirement_text": "Use unique passwords for all enterprise assets and rotate passwords periodically.",
+      "keywords": ["password policy", "unique passwords", "credential management"],
+      "expected_evidence": "Password policy, password manager deployment",
+      "severity": "High",
+      "recommendation_text": "Enforce unique passwords and deploy enterprise password management for all accounts."
+    },
+    {
+      "requirement_code": "CIS-6.1",
+      "category": "CIS 6 - Access Control Management",
+      "requirement_text": "Establish and follow a process for granting access to enterprise assets based on least privilege.",
+      "keywords": ["least privilege", "access control", "RBAC", "provisioning"],
+      "expected_evidence": "Access provisioning procedures, RBAC matrix",
+      "severity": "Critical",
+      "recommendation_text": "Implement least-privilege access with formal provisioning and deprovisioning workflows."
+    },
+    {
+      "requirement_code": "CIS-6.2",
+      "category": "CIS 6 - Access Control Management",
+      "requirement_text": "Require multi-factor authentication for all externally-exposed enterprise applications.",
+      "keywords": ["MFA", "multi-factor", "external access"],
+      "expected_evidence": "MFA deployment for external apps, authentication policy",
+      "severity": "Critical",
+      "recommendation_text": "Deploy MFA on all internet-facing applications and VPN access."
+    },
+    {
+      "requirement_code": "CIS-7.1",
+      "category": "CIS 7 - Continuous Vulnerability Management",
+      "requirement_text": "Establish and maintain a vulnerability management process.",
+      "keywords": ["vulnerability management", "vulnerability scanning", "patch management"],
+      "expected_evidence": "Vulnerability management policy, scan schedules, remediation tracking",
+      "severity": "Critical",
+      "recommendation_text": "Run automated vulnerability scans at least weekly and track remediation to completion."
+    },
+    {
+      "requirement_code": "CIS-7.2",
+      "category": "CIS 7 - Continuous Vulnerability Management",
+      "requirement_text": "Perform automated vulnerability scans of enterprise assets at least monthly.",
+      "keywords": ["vulnerability scanning", "automated scanning", "CVE"],
+      "expected_evidence": "Vulnerability scan reports, scanning tool configuration",
+      "severity": "High",
+      "recommendation_text": "Deploy automated vulnerability scanning across all enterprise assets monthly at minimum."
+    },
+    {
+      "requirement_code": "CIS-8.1",
+      "category": "CIS 8 - Audit Log Management",
+      "requirement_text": "Establish and maintain an audit log management process for enterprise assets.",
+      "keywords": ["audit logging", "log management", "SIEM", "log retention"],
+      "expected_evidence": "Logging policy, centralized log management, retention schedules",
+      "severity": "High",
+      "recommendation_text": "Centralize logs from all critical systems with defined retention and review procedures."
+    },
+    {
+      "requirement_code": "CIS-8.2",
+      "category": "CIS 8 - Audit Log Management",
+      "requirement_text": "Collect audit logs from enterprise assets and ensure logs are protected from tampering.",
+      "keywords": ["log collection", "log integrity", "tamper protection"],
+      "expected_evidence": "Log collection architecture, log integrity controls",
+      "severity": "High",
+      "recommendation_text": "Collect logs to a centralized SIEM with write-once storage and access controls."
+    },
+    {
+      "requirement_code": "CIS-9.1",
+      "category": "CIS 9 - Email and Web Browser Protections",
+      "requirement_text": "Ensure only fully supported browsers and email clients are allowed in the enterprise.",
+      "keywords": ["browser security", "email security", "supported software"],
+      "expected_evidence": "Approved software list, browser/email security configuration",
+      "severity": "Medium",
+      "recommendation_text": "Maintain allowlist of supported browsers and email clients with security configurations enforced."
+    },
+    {
+      "requirement_code": "CIS-10.1",
+      "category": "CIS 10 - Malware Defenses",
+      "requirement_text": "Deploy and maintain anti-malware software on all enterprise assets.",
+      "keywords": ["antivirus", "anti-malware", "EDR", "endpoint protection"],
+      "expected_evidence": "EDR/antivirus deployment records, malware detection reports",
+      "severity": "Critical",
+      "recommendation_text": "Deploy EDR on all endpoints with real-time scanning and centralized management."
+    },
+    {
+      "requirement_code": "CIS-11.1",
+      "category": "CIS 11 - Data Recovery",
+      "requirement_text": "Establish and maintain a data recovery process with tested backups.",
+      "keywords": ["backup", "recovery", "RTO", "RPO", "restore testing"],
+      "expected_evidence": "Backup policy, backup schedules, restore test results",
+      "severity": "Critical",
+      "recommendation_text": "Implement automated encrypted backups and test restoration quarterly."
+    },
+    {
+      "requirement_code": "CIS-12.1",
+      "category": "CIS 12 - Network Infrastructure Management",
+      "requirement_text": "Ensure network infrastructure is kept up-to-date with security patches.",
+      "keywords": ["network patching", "firmware updates", "network devices"],
+      "expected_evidence": "Network device patch records, firmware update procedures",
+      "severity": "High",
+      "recommendation_text": "Patch network infrastructure firmware and software within defined SLAs."
+    },
+    {
+      "requirement_code": "CIS-13.1",
+      "category": "CIS 13 - Network Monitoring and Defense",
+      "requirement_text": "Deploy network monitoring tools to identify and alert on malicious network activity.",
+      "keywords": ["network monitoring", "IDS", "NDR", "network security"],
+      "expected_evidence": "Network monitoring tools, IDS/NDR deployment, alert configuration",
+      "severity": "High",
+      "recommendation_text": "Deploy network intrusion detection and monitor for anomalous traffic patterns."
+    },
+    {
+      "requirement_code": "CIS-14.1",
+      "category": "CIS 14 - Security Awareness Training",
+      "requirement_text": "Establish and maintain a security awareness program for all workforce members.",
+      "keywords": ["security awareness", "training", "phishing simulation"],
+      "expected_evidence": "Training program, completion records, phishing test results",
+      "severity": "High",
+      "recommendation_text": "Deliver mandatory security awareness training annually with simulated phishing exercises."
+    },
+    {
+      "requirement_code": "CIS-15.1",
+      "category": "CIS 15 - Service Provider Management",
+      "requirement_text": "Establish and maintain an inventory of service providers and assess their security posture.",
+      "keywords": ["vendor management", "third party risk", "service provider"],
+      "expected_evidence": "Vendor inventory, third-party risk assessments",
+      "severity": "High",
+      "recommendation_text": "Inventory all service providers and conduct security assessments before engagement."
+    },
+    {
+      "requirement_code": "CIS-16.1",
+      "category": "CIS 16 - Application Software Security",
+      "requirement_text": "Establish secure coding practices and train developers in application security.",
+      "keywords": ["secure coding", "developer training", "OWASP", "SAST"],
+      "expected_evidence": "Secure coding standards, developer training records, SAST integration",
+      "severity": "High",
+      "recommendation_text": "Train developers on OWASP Top 10 and integrate SAST into the development pipeline."
+    },
+    {
+      "requirement_code": "CIS-17.1",
+      "category": "CIS 17 - Incident Response Management",
+      "requirement_text": "Establish and maintain an incident response process with defined roles and procedures.",
+      "keywords": ["incident response", "IR plan", "incident handling"],
+      "expected_evidence": "Incident response plan, playbooks, tabletop exercise records",
+      "severity": "Critical",
+      "recommendation_text": "Develop and test incident response plans with defined roles, escalation, and communication procedures."
+    },
+    {
+      "requirement_code": "CIS-18.1",
+      "category": "CIS 18 - Penetration Testing",
+      "requirement_text": "Establish and maintain a penetration testing program based on risk.",
+      "keywords": ["penetration testing", "red team", "security assessment"],
+      "expected_evidence": "Penetration test reports, testing schedule, remediation tracking",
+      "severity": "High",
+      "recommendation_text": "Conduct annual penetration tests with remediation tracking for all findings."
+    }
+  ]
+}

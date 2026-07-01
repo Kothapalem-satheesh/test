@@ -1,0 +1,323 @@
+{
+  "name": "NIST CSF",
+  "description": "NIST Cybersecurity Framework 2.0 - Core Functions and Categories",
+  "version": "2.0",
+  "optional": false,
+  "requirements": [
+    {
+      "requirement_code": "ID.AM-1",
+      "category": "Identify - Asset Management",
+      "requirement_text": "Physical devices and systems within the organization are inventoried.",
+      "keywords": ["asset inventory", "hardware", "device management", "CMDB"],
+      "expected_evidence": "Asset inventory policy, CMDB documentation, hardware tracking procedures",
+      "severity": "High",
+      "recommendation_text": "Establish and maintain a comprehensive asset inventory including all physical devices, systems, and endpoints with ownership and classification."
+    },
+    {
+      "requirement_code": "ID.AM-2",
+      "category": "Identify - Asset Management",
+      "requirement_text": "Software platforms and applications within the organization are inventoried.",
+      "keywords": ["software inventory", "application catalog", "license management"],
+      "expected_evidence": "Software asset management policy, application inventory list",
+      "severity": "High",
+      "recommendation_text": "Implement software asset management (SAM) to track all applications, versions, and licenses."
+    },
+    {
+      "requirement_code": "ID.AM-3",
+      "category": "Identify - Asset Management",
+      "requirement_text": "Organizational communication and data flows are mapped.",
+      "keywords": ["data flow", "network diagram", "communication mapping"],
+      "expected_evidence": "Data flow diagrams, network architecture documentation",
+      "severity": "Medium",
+      "recommendation_text": "Create and maintain data flow diagrams showing how information moves between systems and external parties."
+    },
+    {
+      "requirement_code": "ID.AM-5",
+      "category": "Identify - Asset Management",
+      "requirement_text": "Resources (hardware, devices, data, software) are prioritized based on their classification, criticality, and business value.",
+      "keywords": ["asset classification", "criticality", "business value"],
+      "expected_evidence": "Asset classification policy, criticality ratings documentation",
+      "severity": "High",
+      "recommendation_text": "Define asset classification criteria and assign criticality ratings to all inventoried assets."
+    },
+    {
+      "requirement_code": "ID.RA-1",
+      "category": "Identify - Risk Assessment",
+      "requirement_text": "Asset vulnerabilities are identified and documented.",
+      "keywords": ["vulnerability assessment", "vulnerability scanning", "CVE"],
+      "expected_evidence": "Vulnerability scan reports, vulnerability management policy",
+      "severity": "Critical",
+      "recommendation_text": "Implement regular vulnerability scanning and maintain a documented vulnerability management program."
+    },
+    {
+      "requirement_code": "ID.RA-2",
+      "category": "Identify - Risk Assessment",
+      "requirement_text": "Cyber threat intelligence is received from information sharing forums and sources.",
+      "keywords": ["threat intelligence", "ISAC", "threat feeds"],
+      "expected_evidence": "Threat intelligence subscription records, threat briefing documentation",
+      "severity": "Medium",
+      "recommendation_text": "Subscribe to relevant threat intelligence feeds and integrate findings into risk assessments."
+    },
+    {
+      "requirement_code": "ID.RA-5",
+      "category": "Identify - Risk Assessment",
+      "requirement_text": "Threats, vulnerabilities, likelihoods, and impacts are used to determine risk.",
+      "keywords": ["risk assessment", "risk matrix", "threat modeling"],
+      "expected_evidence": "Risk assessment reports, risk register, risk treatment plans",
+      "severity": "Critical",
+      "recommendation_text": "Conduct formal risk assessments using a standardized methodology that evaluates threats, vulnerabilities, and business impact."
+    },
+    {
+      "requirement_code": "PR.AC-1",
+      "category": "Protect - Access Control",
+      "requirement_text": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users and processes.",
+      "keywords": ["identity management", "IAM", "credential management", "access control"],
+      "expected_evidence": "IAM policy, user provisioning procedures, access review records",
+      "severity": "Critical",
+      "recommendation_text": "Implement centralized identity and access management with automated provisioning, deprovisioning, and periodic access reviews."
+    },
+    {
+      "requirement_code": "PR.AC-3",
+      "category": "Protect - Access Control",
+      "requirement_text": "Remote access is managed.",
+      "keywords": ["remote access", "VPN", "zero trust", "remote work"],
+      "expected_evidence": "Remote access policy, VPN configuration, MFA requirements for remote access",
+      "severity": "High",
+      "recommendation_text": "Enforce MFA for all remote access and implement zero-trust network access controls."
+    },
+    {
+      "requirement_code": "PR.AC-4",
+      "category": "Protect - Access Control",
+      "requirement_text": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties.",
+      "keywords": ["least privilege", "separation of duties", "RBAC", "access permissions"],
+      "expected_evidence": "RBAC matrix, least privilege policy, SoD controls documentation",
+      "severity": "Critical",
+      "recommendation_text": "Implement role-based access control with least privilege principles and enforce separation of duties for critical functions."
+    },
+    {
+      "requirement_code": "PR.AC-7",
+      "category": "Protect - Access Control",
+      "requirement_text": "Users, devices, and other assets are authenticated commensurate with the risk of the transaction.",
+      "keywords": ["authentication", "MFA", "multi-factor", "adaptive authentication"],
+      "expected_evidence": "Authentication policy, MFA deployment documentation",
+      "severity": "Critical",
+      "recommendation_text": "Deploy multi-factor authentication for all users, especially for privileged and remote access."
+    },
+    {
+      "requirement_code": "PR.DS-1",
+      "category": "Protect - Data Security",
+      "requirement_text": "Data-at-rest is protected.",
+      "keywords": ["encryption at rest", "data protection", "disk encryption", "database encryption"],
+      "expected_evidence": "Encryption policy, encryption implementation documentation for databases and storage",
+      "severity": "Critical",
+      "recommendation_text": "Encrypt all sensitive data at rest using industry-standard algorithms (AES-256) for databases, file systems, and backups."
+    },
+    {
+      "requirement_code": "PR.DS-2",
+      "category": "Protect - Data Security",
+      "requirement_text": "Data-in-transit is protected.",
+      "keywords": ["TLS", "encryption in transit", "HTTPS", "VPN"],
+      "expected_evidence": "TLS configuration standards, certificate management policy",
+      "severity": "Critical",
+      "recommendation_text": "Enforce TLS 1.2+ for all data in transit and implement certificate management procedures."
+    },
+    {
+      "requirement_code": "PR.DS-5",
+      "category": "Protect - Data Security",
+      "requirement_text": "Protections against data leaks are implemented.",
+      "keywords": ["DLP", "data loss prevention", "data leakage", "exfiltration"],
+      "expected_evidence": "DLP policy, DLP tool configuration, data classification labels",
+      "severity": "High",
+      "recommendation_text": "Deploy data loss prevention controls to detect and prevent unauthorized data exfiltration."
+    },
+    {
+      "requirement_code": "PR.IP-1",
+      "category": "Protect - Information Protection",
+      "requirement_text": "A baseline configuration of information technology/industrial control systems is created and maintained.",
+      "keywords": ["baseline configuration", "hardening", "CIS benchmarks", "configuration management"],
+      "expected_evidence": "Baseline configuration standards, hardening guides, configuration management database",
+      "severity": "High",
+      "recommendation_text": "Define and enforce security baseline configurations based on CIS benchmarks or vendor hardening guides."
+    },
+    {
+      "requirement_code": "PR.IP-4",
+      "category": "Protect - Information Protection",
+      "requirement_text": "Backups of information are conducted, maintained, and tested periodically.",
+      "keywords": ["backup", "disaster recovery", "business continuity", "restore testing"],
+      "expected_evidence": "Backup policy, backup schedules, restore test results",
+      "severity": "Critical",
+      "recommendation_text": "Implement automated backups with encryption and conduct quarterly restore testing."
+    },
+    {
+      "requirement_code": "PR.IP-6",
+      "category": "Protect - Information Protection",
+      "requirement_text": "Data is destroyed according to policy.",
+      "keywords": ["data destruction", "media sanitization", "data retention", "secure disposal"],
+      "expected_evidence": "Data retention and destruction policy, sanitization certificates",
+      "severity": "Medium",
+      "recommendation_text": "Establish data retention schedules and secure destruction procedures for all media types."
+    },
+    {
+      "requirement_code": "PR.MA-1",
+      "category": "Protect - Maintenance",
+      "requirement_text": "Maintenance and repair of organizational assets are performed and logged, with approved and controlled tools.",
+      "keywords": ["maintenance", "change management", "patch management"],
+      "expected_evidence": "Maintenance procedures, change management records",
+      "severity": "Medium",
+      "recommendation_text": "Document maintenance procedures and ensure all changes are logged and approved through change management."
+    },
+    {
+      "requirement_code": "PR.PT-1",
+      "category": "Protect - Protective Technology",
+      "requirement_text": "Audit/log records are determined, documented, implemented, and reviewed in accordance with policy.",
+      "keywords": ["logging", "audit trail", "SIEM", "log management"],
+      "expected_evidence": "Logging policy, SIEM configuration, log review procedures",
+      "severity": "High",
+      "recommendation_text": "Implement centralized logging with SIEM integration and define log retention and review schedules."
+    },
+    {
+      "requirement_code": "PR.PT-3",
+      "category": "Protect - Protective Technology",
+      "requirement_text": "The principle of least functionality is incorporated by configuring systems to provide only essential capabilities.",
+      "keywords": ["least functionality", "system hardening", "service minimization"],
+      "expected_evidence": "System hardening standards, unnecessary service disablement documentation",
+      "severity": "Medium",
+      "recommendation_text": "Disable unnecessary services, ports, and protocols on all systems per hardening standards."
+    },
+    {
+      "requirement_code": "DE.AE-1",
+      "category": "Detect - Anomalies and Events",
+      "requirement_text": "A baseline of network operations and expected data flows for users and systems is established and managed.",
+      "keywords": ["network baseline", "anomaly detection", "behavioral analysis"],
+      "expected_evidence": "Network baseline documentation, anomaly detection configuration",
+      "severity": "High",
+      "recommendation_text": "Establish network traffic baselines and configure anomaly detection to identify deviations."
+    },
+    {
+      "requirement_code": "DE.AE-3",
+      "category": "Detect - Anomalies and Events",
+      "requirement_text": "Event data are collected and correlated from multiple sources and sensors.",
+      "keywords": ["event correlation", "SIEM", "security monitoring", "alerting"],
+      "expected_evidence": "SIEM correlation rules, security monitoring dashboard, alert configuration",
+      "severity": "High",
+      "recommendation_text": "Deploy SIEM with correlation rules across all security sensors and critical infrastructure."
+    },
+    {
+      "requirement_code": "DE.CM-1",
+      "category": "Detect - Continuous Monitoring",
+      "requirement_text": "The network is monitored to detect potential cybersecurity events.",
+      "keywords": ["network monitoring", "IDS", "IPS", "NDR"],
+      "expected_evidence": "Network monitoring tools configuration, IDS/IPS deployment documentation",
+      "severity": "High",
+      "recommendation_text": "Deploy network intrusion detection/prevention systems with 24/7 monitoring coverage."
+    },
+    {
+      "requirement_code": "DE.CM-4",
+      "category": "Detect - Continuous Monitoring",
+      "requirement_text": "Malicious code is detected.",
+      "keywords": ["antivirus", "EDR", "malware detection", "endpoint protection"],
+      "expected_evidence": "EDR/antivirus deployment documentation, malware detection reports",
+      "severity": "Critical",
+      "recommendation_text": "Deploy endpoint detection and response (EDR) on all endpoints with real-time malware scanning."
+    },
+    {
+      "requirement_code": "RS.RP-1",
+      "category": "Respond - Response Planning",
+      "requirement_text": "Response plan is executed during or after an incident.",
+      "keywords": ["incident response", "IR plan", "incident handling"],
+      "expected_evidence": "Incident response plan, incident response playbooks, tabletop exercise records",
+      "severity": "Critical",
+      "recommendation_text": "Develop and maintain an incident response plan with defined roles, communication procedures, and regular tabletop exercises."
+    },
+    {
+      "requirement_code": "RS.CO-2",
+      "category": "Respond - Communications",
+      "requirement_text": "Incidents are reported consistent with established criteria.",
+      "keywords": ["incident reporting", "escalation", "notification procedures"],
+      "expected_evidence": "Incident reporting procedures, escalation matrix, notification templates",
+      "severity": "High",
+      "recommendation_text": "Define incident severity criteria and establish clear reporting and escalation procedures."
+    },
+    {
+      "requirement_code": "RS.AN-1",
+      "category": "Respond - Analysis",
+      "requirement_text": "Notifications from detection systems are investigated.",
+      "keywords": ["alert investigation", "triage", "security operations"],
+      "expected_evidence": "SOC procedures, alert triage documentation, investigation records",
+      "severity": "High",
+      "recommendation_text": "Establish SOC procedures for investigating and triaging security alerts within defined SLAs."
+    },
+    {
+      "requirement_code": "RC.RP-1",
+      "category": "Recover - Recovery Planning",
+      "requirement_text": "Recovery plan is executed during or after a cybersecurity incident.",
+      "keywords": ["recovery plan", "disaster recovery", "business continuity"],
+      "expected_evidence": "Disaster recovery plan, BCP documentation, recovery test results",
+      "severity": "Critical",
+      "recommendation_text": "Maintain and test disaster recovery and business continuity plans with defined RTOs and RPOs."
+    },
+    {
+      "requirement_code": "RC.IM-1",
+      "category": "Recover - Improvements",
+      "requirement_text": "Recovery plans incorporate lessons learned.",
+      "keywords": ["lessons learned", "post-incident review", "continuous improvement"],
+      "expected_evidence": "Post-incident review reports, plan update records",
+      "severity": "Medium",
+      "recommendation_text": "Conduct post-incident reviews and update recovery plans based on lessons learned."
+    },
+    {
+      "requirement_code": "GV.OC-1",
+      "category": "Govern - Organizational Context",
+      "requirement_text": "The organizational mission is understood and informs cybersecurity risk management.",
+      "keywords": ["governance", "risk management", "organizational context"],
+      "expected_evidence": "Cybersecurity governance charter, risk management framework documentation",
+      "severity": "High",
+      "recommendation_text": "Align cybersecurity program with organizational mission and establish a governance framework."
+    },
+    {
+      "requirement_code": "GV.RM-1",
+      "category": "Govern - Risk Management Strategy",
+      "requirement_text": "Risk management objectives are established and agreed to by organizational stakeholders.",
+      "keywords": ["risk appetite", "risk tolerance", "risk management strategy"],
+      "expected_evidence": "Risk appetite statement, risk management policy, board approval records",
+      "severity": "High",
+      "recommendation_text": "Define and document organizational risk appetite and tolerance levels approved by leadership."
+    },
+    {
+      "requirement_code": "GV.PO-1",
+      "category": "Govern - Policy",
+      "requirement_text": "Policy for managing cybersecurity risks is established based on organizational context and risk tolerance.",
+      "keywords": ["security policy", "cybersecurity policy", "information security policy"],
+      "expected_evidence": "Information security policy, policy review records, employee acknowledgment",
+      "severity": "Critical",
+      "recommendation_text": "Develop comprehensive information security policies reviewed annually and acknowledged by all personnel."
+    },
+    {
+      "requirement_code": "GV.SC-1",
+      "category": "Govern - Supply Chain",
+      "requirement_text": "A cybersecurity supply chain risk management program is established and agreed to by organizational stakeholders.",
+      "keywords": ["supply chain", "third party risk", "vendor management"],
+      "expected_evidence": "Third-party risk management policy, vendor assessment procedures",
+      "severity": "High",
+      "recommendation_text": "Implement a third-party risk management program with vendor security assessments and contractual requirements."
+    },
+    {
+      "requirement_code": "GV.OV-1",
+      "category": "Govern - Oversight",
+      "requirement_text": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and policy.",
+      "keywords": ["oversight", "metrics", "KPI", "security reporting"],
+      "expected_evidence": "Security metrics dashboard, board reporting, program review records",
+      "severity": "Medium",
+      "recommendation_text": "Establish cybersecurity KPIs and report program effectiveness to leadership quarterly."
+    },
+    {
+      "requirement_code": "PR.AT-1",
+      "category": "Protect - Awareness and Training",
+      "requirement_text": "All users are informed and trained.",
+      "keywords": ["security awareness", "training", "phishing simulation"],
+      "expected_evidence": "Security awareness training program, training completion records, phishing test results",
+      "severity": "High",
+      "recommendation_text": "Implement mandatory security awareness training with annual refreshers and simulated phishing exercises."
+    }
+  ]
+}

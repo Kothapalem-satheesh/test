@@ -1,0 +1,215 @@
+{
+  "name": "OWASP Top 10",
+  "description": "OWASP Top 10 Web Application Security Risks (2021) - critical web app vulnerabilities",
+  "version": "2021",
+  "optional": false,
+  "requirements": [
+    {
+      "requirement_code": "A01:2021",
+      "category": "Broken Access Control",
+      "requirement_text": "Access control enforces policy such that users cannot act outside of their intended permissions. Failures lead to unauthorized information disclosure, modification, or destruction.",
+      "keywords": ["access control", "authorization", "IDOR", "privilege escalation", "RBAC"],
+      "expected_evidence": "Access control policy, authorization matrix, penetration test results for access control",
+      "severity": "Critical",
+      "recommendation_text": "Implement deny-by-default access controls, enforce ownership checks server-side, and test for IDOR and privilege escalation."
+    },
+    {
+      "requirement_code": "A01.1",
+      "category": "Broken Access Control",
+      "requirement_text": "Deny access by default and enforce least privilege for all users and API endpoints.",
+      "keywords": ["least privilege", "deny by default", "API authorization"],
+      "expected_evidence": "Least privilege policy, API authorization configuration",
+      "severity": "Critical",
+      "recommendation_text": "Configure all endpoints to deny by default and grant only required permissions per role."
+    },
+    {
+      "requirement_code": "A02:2021",
+      "category": "Cryptographic Failures",
+      "requirement_text": "Sensitive data is protected at rest and in transit using strong cryptography. Failures include transmitting or storing sensitive data in cleartext.",
+      "keywords": ["encryption", "TLS", "cryptography", "data protection", "PII"],
+      "expected_evidence": "Encryption policy, TLS configuration, data classification with encryption requirements",
+      "severity": "Critical",
+      "recommendation_text": "Encrypt all sensitive data at rest (AES-256) and in transit (TLS 1.2+) and disable weak cipher suites."
+    },
+    {
+      "requirement_code": "A02.1",
+      "category": "Cryptographic Failures",
+      "requirement_text": "Classify data processed by the application and apply appropriate cryptographic protections.",
+      "keywords": ["data classification", "encryption at rest", "key management"],
+      "expected_evidence": "Data classification policy, encryption implementation documentation",
+      "severity": "High",
+      "recommendation_text": "Classify all application data and apply encryption proportional to sensitivity."
+    },
+    {
+      "requirement_code": "A03:2021",
+      "category": "Injection",
+      "requirement_text": "User-supplied data is validated, sanitized, and never interpreted as commands or queries. SQL, OS, LDAP, and other injection flaws are prevented.",
+      "keywords": ["SQL injection", "injection", "input validation", "parameterized queries"],
+      "expected_evidence": "Secure coding standards, SAST/DAST results, parameterized query usage",
+      "severity": "Critical",
+      "recommendation_text": "Use parameterized queries/ORMs, validate all input, and run injection-focused security testing."
+    },
+    {
+      "requirement_code": "A03.1",
+      "category": "Injection",
+      "requirement_text": "All database queries use parameterized statements or safe ORM patterns.",
+      "keywords": ["SQL injection", "ORM", "prepared statements"],
+      "expected_evidence": "Code review records, ORM configuration, SAST scan results",
+      "severity": "Critical",
+      "recommendation_text": "Eliminate dynamic SQL concatenation; enforce parameterized queries across all data access layers."
+    },
+    {
+      "requirement_code": "A04:2021",
+      "category": "Insecure Design",
+      "requirement_text": "Security is integrated into the design and architecture phase. Threat modeling and secure design patterns are applied before implementation.",
+      "keywords": ["secure design", "threat modeling", "security architecture", "STRIDE"],
+      "expected_evidence": "Threat models, security design reviews, secure architecture documentation",
+      "severity": "High",
+      "recommendation_text": "Conduct threat modeling for all new features and apply secure design patterns from the design phase."
+    },
+    {
+      "requirement_code": "A05:2021",
+      "category": "Security Misconfiguration",
+      "requirement_text": "Systems are securely configured with hardened defaults, minimal attack surface, and disabled unnecessary features.",
+      "keywords": ["hardening", "security configuration", "default credentials", "CIS benchmarks"],
+      "expected_evidence": "Hardening baselines, configuration management, security scan results",
+      "severity": "High",
+      "recommendation_text": "Apply CIS/vendor hardening guides, remove default accounts, and automate configuration compliance scanning."
+    },
+    {
+      "requirement_code": "A05.1",
+      "category": "Security Misconfiguration",
+      "requirement_text": "Security headers (CSP, HSTS, X-Frame-Options) are properly configured on all HTTP responses.",
+      "keywords": ["security headers", "CSP", "HSTS", "X-Frame-Options"],
+      "expected_evidence": "HTTP security header configuration, security header scan results",
+      "severity": "Medium",
+      "recommendation_text": "Deploy comprehensive security headers on all web application responses."
+    },
+    {
+      "requirement_code": "A06:2021",
+      "category": "Vulnerable and Outdated Components",
+      "requirement_text": "Components (libraries, frameworks, OS) are inventoried, monitored for vulnerabilities, and kept up to date.",
+      "keywords": ["SCA", "dependency management", "vulnerable libraries", "SBOM", "patch management"],
+      "expected_evidence": "Dependency inventory, SCA scan results, patch management policy",
+      "severity": "Critical",
+      "recommendation_text": "Maintain SBOM, scan dependencies continuously, and patch critical vulnerabilities within defined SLAs."
+    },
+    {
+      "requirement_code": "A07:2021",
+      "category": "Identification and Authentication Failures",
+      "requirement_text": "Authentication mechanisms confirm user identity and resist credential stuffing, brute force, and session hijacking.",
+      "keywords": ["authentication", "MFA", "password policy", "session management", "brute force"],
+      "expected_evidence": "Authentication policy, MFA deployment, account lockout configuration",
+      "severity": "Critical",
+      "recommendation_text": "Enforce MFA, strong password policies, rate limiting on login, and secure session management."
+    },
+    {
+      "requirement_code": "A07.1",
+      "category": "Identification and Authentication Failures",
+      "requirement_text": "Multi-factor authentication is required for all privileged and administrative accounts.",
+      "keywords": ["MFA", "2FA", "admin authentication"],
+      "expected_evidence": "MFA policy for admins, MFA enrollment records",
+      "severity": "Critical",
+      "recommendation_text": "Require MFA for all administrative accounts without exception."
+    },
+    {
+      "requirement_code": "A08:2021",
+      "category": "Software and Data Integrity Failures",
+      "requirement_text": "Software updates and CI/CD pipelines are protected against unauthorized modification. Integrity of data and code is verified.",
+      "keywords": ["CI/CD security", "code integrity", "supply chain", "signed artifacts"],
+      "expected_evidence": "CI/CD pipeline security, signed build artifacts, integrity verification",
+      "severity": "High",
+      "recommendation_text": "Sign and verify build artifacts, secure CI/CD pipelines, and validate third-party component integrity."
+    },
+    {
+      "requirement_code": "A09:2021",
+      "category": "Security Logging and Monitoring Failures",
+      "requirement_text": "Security-relevant events are logged, monitored, and alerted on. Logs are protected from tampering.",
+      "keywords": ["logging", "SIEM", "monitoring", "audit trail", "alerting"],
+      "expected_evidence": "Logging policy, SIEM configuration, alert rules, log retention policy",
+      "severity": "High",
+      "recommendation_text": "Log all authentication, authorization, and input validation failures; integrate with SIEM with real-time alerting."
+    },
+    {
+      "requirement_code": "A09.1",
+      "category": "Security Logging and Monitoring Failures",
+      "requirement_text": "Failed login attempts and access control violations are logged and monitored.",
+      "keywords": ["failed login", "access violation", "security events"],
+      "expected_evidence": "Security event logging configuration, monitoring dashboard",
+      "severity": "High",
+      "recommendation_text": "Configure logging and alerting for all failed authentication and authorization events."
+    },
+    {
+      "requirement_code": "A10:2021",
+      "category": "Server-Side Request Forgery (SSRF)",
+      "requirement_text": "The application validates and sanitizes URLs and prevents server-side requests to unintended destinations.",
+      "keywords": ["SSRF", "URL validation", "network segmentation", "allowlist"],
+      "expected_evidence": "SSRF prevention controls, URL validation implementation, network segmentation",
+      "severity": "High",
+      "recommendation_text": "Validate and allowlist outbound URLs, segment application servers from internal networks."
+    },
+    {
+      "requirement_code": "A01.2",
+      "category": "Broken Access Control",
+      "requirement_text": "CORS policy is restrictive and does not allow unauthorized cross-origin access to sensitive resources.",
+      "keywords": ["CORS", "cross-origin", "access control"],
+      "expected_evidence": "CORS configuration documentation",
+      "severity": "Medium",
+      "recommendation_text": "Restrict CORS to trusted origins only; never use wildcard CORS with credentials."
+    },
+    {
+      "requirement_code": "A02.2",
+      "category": "Cryptographic Failures",
+      "requirement_text": "Cryptographic keys and secrets are managed securely and never hardcoded in source code.",
+      "keywords": ["secrets management", "key management", "hardcoded secrets"],
+      "expected_evidence": "Secrets management solution, code scanning for hardcoded secrets",
+      "severity": "Critical",
+      "recommendation_text": "Use a secrets manager; scan code for hardcoded credentials; rotate keys regularly."
+    },
+    {
+      "requirement_code": "A04.1",
+      "category": "Insecure Design",
+      "requirement_text": "Rate limiting is implemented on authentication, API, and resource-intensive endpoints.",
+      "keywords": ["rate limiting", "throttling", "DoS prevention", "API security"],
+      "expected_evidence": "Rate limiting configuration, API gateway throttling policies",
+      "severity": "High",
+      "recommendation_text": "Deploy rate limiting on all public endpoints, especially authentication and data export APIs."
+    },
+    {
+      "requirement_code": "A06.1",
+      "category": "Vulnerable Components",
+      "requirement_text": "A process exists to remove unused dependencies, features, and accounts.",
+      "keywords": ["dependency cleanup", "attack surface reduction", "unused services"],
+      "expected_evidence": "Dependency audit records, decommissioning procedures",
+      "severity": "Medium",
+      "recommendation_text": "Regularly audit and remove unused libraries, services, and user accounts."
+    },
+    {
+      "requirement_code": "A07.2",
+      "category": "Authentication Failures",
+      "requirement_text": "Session tokens are invalidated on logout and expire after a defined idle timeout.",
+      "keywords": ["session timeout", "logout", "session invalidation"],
+      "expected_evidence": "Session management policy, session timeout configuration",
+      "severity": "High",
+      "recommendation_text": "Invalidate sessions server-side on logout and enforce idle session timeouts."
+    },
+    {
+      "requirement_code": "A08.1",
+      "category": "Data Integrity",
+      "requirement_text": "Deserialization of untrusted data is prevented or strictly controlled.",
+      "keywords": ["deserialization", "untrusted data", "object injection"],
+      "expected_evidence": "Deserialization controls, secure coding standards",
+      "severity": "High",
+      "recommendation_text": "Avoid deserializing untrusted data; use safe serialization formats like JSON with schema validation."
+    },
+    {
+      "requirement_code": "A10.1",
+      "category": "SSRF",
+      "requirement_text": "Internal network metadata services (e.g., cloud metadata endpoints) are blocked from application access.",
+      "keywords": ["SSRF", "metadata endpoint", "cloud security", "IMDS"],
+      "expected_evidence": "Network egress controls, metadata endpoint protection",
+      "severity": "Critical",
+      "recommendation_text": "Block access to cloud metadata endpoints (169.254.169.254) and internal IP ranges from application servers."
+    }
+  ]
+}

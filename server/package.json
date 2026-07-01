@@ -1,0 +1,25 @@
+{
+  "name": "complianceai-server",
+  "version": "1.0.0",
+  "description": "ComplianceAI Express API - orchestrator backend",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "seed": "node scripts/seedFrameworks.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@supabase/supabase-js": "^2.49.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "form-data": "^4.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.16.0",
+    "uuid": "^11.1.0"
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "name": "ISO/IEC 27001",
+  "description": "ISO/IEC 27001:2022 Annex A Information Security Controls - representative control subset",
+  "version": "2022",
+  "optional": false,
+  "requirements": [
+    {
+      "requirement_code": "A.5.1",
+      "category": "Organizational Controls - Policies",
+      "requirement_text": "Policies for information security shall be defined, approved by management, published, and communicated to relevant personnel.",
+      "keywords": ["information security policy", "ISMS", "security governance"],
+      "expected_evidence": "Information security policy, management approval, employee acknowledgment",
+      "severity": "Critical",
+      "recommendation_text": "Develop comprehensive information security policies approved by leadership and communicated to all personnel."
+    },
+    {
+      "requirement_code": "A.5.2",
+      "category": "Organizational Controls - Roles",
+      "requirement_text": "Information security roles and responsibilities shall be defined and allocated.",
+      "keywords": ["roles and responsibilities", "CISO", "security governance"],
+      "expected_evidence": "RACI matrix, job descriptions with security responsibilities, org chart",
+      "severity": "High",
+      "recommendation_text": "Define and document security roles including CISO/security officer with clear accountability."
+    },
+    {
+      "requirement_code": "A.5.9",
+      "category": "Organizational Controls - Asset Inventory",
+      "requirement_text": "An inventory of information and associated assets shall be developed and maintained.",
+      "keywords": ["asset inventory", "information assets", "asset register"],
+      "expected_evidence": "Asset register, information asset inventory",
+      "severity": "High",
+      "recommendation_text": "Maintain a comprehensive inventory of information assets with owners and classification."
+    },
+    {
+      "requirement_code": "A.5.10",
+      "category": "Organizational Controls - Acceptable Use",
+      "requirement_text": "Rules for the acceptable use of information and assets shall be identified, documented, and implemented.",
+      "keywords": ["acceptable use policy", "AUP", "usage rules"],
+      "expected_evidence": "Acceptable use policy, employee acknowledgment records",
+      "severity": "Medium",
+      "recommendation_text": "Publish acceptable use rules covering email, internet, and data handling with employee sign-off."
+    },
+    {
+      "requirement_code": "A.5.12",
+      "category": "Organizational Controls - Classification",
+      "requirement_text": "Information shall be classified according to the organization's information security needs.",
+      "keywords": ["data classification", "information classification", "labeling"],
+      "expected_evidence": "Data classification scheme, classification labels on documents",
+      "severity": "High",
+      "recommendation_text": "Implement a data classification scheme (e.g., Public, Internal, Confidential, Restricted) and apply labels."
+    },
+    {
+      "requirement_code": "A.5.15",
+      "category": "Organizational Controls - Access Control",
+      "requirement_text": "Rules to control physical and logical access to information and assets shall be established.",
+      "keywords": ["access control policy", "logical access", "physical access"],
+      "expected_evidence": "Access control policy, access management procedures",
+      "severity": "Critical",
+      "recommendation_text": "Define access control rules based on business need and least privilege principles."
+    },
+    {
+      "requirement_code": "A.5.23",
+      "category": "Organizational Controls - Cloud Security",
+      "requirement_text": "Processes for acquisition, use, management, and exit from cloud services shall be established.",
+      "keywords": ["cloud security", "cloud services", "SaaS", "shared responsibility"],
+      "expected_evidence": "Cloud security policy, cloud provider assessments, shared responsibility matrix",
+      "severity": "High",
+      "recommendation_text": "Establish cloud security governance including provider assessment and shared responsibility documentation."
+    },
+    {
+      "requirement_code": "A.5.24",
+      "category": "Organizational Controls - Incident Management",
+      "requirement_text": "The organization shall plan and prepare for managing information security incidents.",
+      "keywords": ["incident management", "incident response", "security incidents"],
+      "expected_evidence": "Incident management plan, incident response procedures",
+      "severity": "Critical",
+      "recommendation_text": "Develop incident management procedures with detection, reporting, assessment, and response workflows."
+    },
+    {
+      "requirement_code": "A.5.29",
+      "category": "Organizational Controls - Business Continuity",
+      "requirement_text": "Information security continuity shall be embedded in the organization's business continuity management.",
+      "keywords": ["business continuity", "BCP", "disaster recovery", "ISMS continuity"],
+      "expected_evidence": "Business continuity plan, DR plan, continuity test results",
+      "severity": "Critical",
+      "recommendation_text": "Integrate information security requirements into BCP/DR plans with defined RTOs and RPOs."
+    },
+    {
+      "requirement_code": "A.5.30",
+      "category": "Organizational Controls - Legal Compliance",
+      "requirement_text": "Legal, statutory, regulatory, and contractual requirements relevant to information security shall be identified.",
+      "keywords": ["legal compliance", "regulatory", "GDPR", "compliance register"],
+      "expected_evidence": "Compliance register, legal requirements mapping, regulatory assessments",
+      "severity": "High",
+      "recommendation_text": "Maintain a compliance register mapping applicable laws and regulations to security controls."
+    },
+    {
+      "requirement_code": "A.6.3",
+      "category": "People Controls - Awareness",
+      "requirement_text": "Personnel shall receive appropriate information security awareness, education, and training.",
+      "keywords": ["security awareness", "training", "education"],
+      "expected_evidence": "Training program, completion records, awareness materials",
+      "severity": "High",
+      "recommendation_text": "Deliver role-based security awareness training with annual refreshers for all personnel."
+    },
+    {
+      "requirement_code": "A.7.1",
+      "category": "Physical Controls - Perimeters",
+      "requirement_text": "Security perimeters shall be defined and used to protect areas containing information and assets.",
+      "keywords": ["physical security", "perimeter security", "secure areas"],
+      "expected_evidence": "Physical security policy, access control to facilities",
+      "severity": "Medium",
+      "recommendation_text": "Define security perimeters for offices and data centers with appropriate access controls."
+    },
+    {
+      "requirement_code": "A.8.1",
+      "category": "Technological Controls - Endpoint Devices",
+      "requirement_text": "Information stored on, processed by, or accessible via endpoint devices shall be protected.",
+      "keywords": ["endpoint security", "device protection", "MDM", "laptop security"],
+      "expected_evidence": "Endpoint protection policy, MDM configuration, disk encryption",
+      "severity": "High",
+      "recommendation_text": "Deploy endpoint protection including disk encryption, MDM, and anti-malware on all devices."
+    },
+    {
+      "requirement_code": "A.8.2",
+      "category": "Technological Controls - Privileged Access",
+      "requirement_text": "The allocation and use of privileged access rights shall be restricted and managed.",
+      "keywords": ["privileged access", "PAM", "admin accounts", "least privilege"],
+      "expected_evidence": "Privileged access management policy, admin account inventory",
+      "severity": "Critical",
+      "recommendation_text": "Implement PAM solution with just-in-time access and monitoring for all privileged accounts."
+    },
+    {
+      "requirement_code": "A.8.3",
+      "category": "Technological Controls - Access Restriction",
+      "requirement_text": "Access to information and assets shall be restricted in accordance with the access control policy.",
+      "keywords": ["access restriction", "RBAC", "authorization"],
+      "expected_evidence": "Access control implementation, RBAC configuration",
+      "severity": "Critical",
+      "recommendation_text": "Enforce access restrictions aligned with the access control policy across all systems."
+    },
+    {
+      "requirement_code": "A.8.5",
+      "category": "Technological Controls - Secure Authentication",
+      "requirement_text": "Secure authentication technologies and procedures shall be implemented.",
+      "keywords": ["authentication", "MFA", "secure login"],
+      "expected_evidence": "Authentication policy, MFA deployment",
+      "severity": "Critical",
+      "recommendation_text": "Deploy secure authentication including MFA for all users accessing sensitive systems."
+    },
+    {
+      "requirement_code": "A.8.9",
+      "category": "Technological Controls - Configuration Management",
+      "requirement_text": "Configurations of hardware, software, services, and networks shall be established, documented, and monitored.",
+      "keywords": ["configuration management", "hardening", "baseline configuration"],
+      "expected_evidence": "Configuration baselines, change management records",
+      "severity": "High",
+      "recommendation_text": "Document and enforce secure configuration baselines with change control procedures."
+    },
+    {
+      "requirement_code": "A.8.10",
+      "category": "Technological Controls - Information Deletion",
+      "requirement_text": "Information stored in systems, devices, or storage media shall be deleted when no longer required.",
+      "keywords": ["data deletion", "data retention", "secure disposal"],
+      "expected_evidence": "Data retention policy, secure deletion procedures",
+      "severity": "Medium",
+      "recommendation_text": "Define retention schedules and implement secure deletion when data is no longer needed."
+    },
+    {
+      "requirement_code": "A.8.11",
+      "category": "Technological Controls - Data Masking",
+      "requirement_text": "Data masking shall be used in accordance with the organization's topic-specific policy on access control.",
+      "keywords": ["data masking", "anonymization", "pseudonymization"],
+      "expected_evidence": "Data masking policy, masking implementation in non-production environments",
+      "severity": "Medium",
+      "recommendation_text": "Mask or anonymize sensitive data in development and test environments."
+    },
+    {
+      "requirement_code": "A.8.12",
+      "category": "Technological Controls - DLP",
+      "requirement_text": "Data leakage prevention measures shall be applied to systems, networks, and endpoint devices.",
+      "keywords": ["DLP", "data loss prevention", "exfiltration"],
+      "expected_evidence": "DLP policy, DLP tool configuration",
+      "severity": "High",
+      "recommendation_text": "Deploy DLP controls to detect and prevent unauthorized data exfiltration."
+    },
+    {
+      "requirement_code": "A.8.13",
+      "category": "Technological Controls - Backup",
+      "requirement_text": "Backup copies of information, software, and systems shall be maintained and regularly tested.",
+      "keywords": ["backup", "restore testing", "business continuity"],
+      "expected_evidence": "Backup policy, backup schedules, restore test records",
+      "severity": "Critical",
+      "recommendation_text": "Maintain encrypted backups with regular restore testing per defined RPO/RTO."
+    },
+    {
+      "requirement_code": "A.8.15",
+      "category": "Technological Controls - Logging",
+      "requirement_text": "Logs that record activities, exceptions, faults, and information security events shall be produced and stored.",
+      "keywords": ["logging", "audit trail", "security events"],
+      "expected_evidence": "Logging policy, log sources, centralized log storage",
+      "severity": "High",
+      "recommendation_text": "Enable comprehensive logging on all critical systems with centralized storage and retention."
+    },
+    {
+      "requirement_code": "A.8.16",
+      "category": "Technological Controls - Monitoring",
+      "requirement_text": "Networks, systems, and applications shall be monitored for anomalous behaviour and security events.",
+      "keywords": ["monitoring", "SIEM", "anomaly detection", "security operations"],
+      "expected_evidence": "Monitoring tools, SIEM rules, SOC procedures",
+      "severity": "High",
+      "recommendation_text": "Deploy continuous monitoring with SIEM integration and defined alert response procedures."
+    },
+    {
+      "requirement_code": "A.8.19",
+      "category": "Technological Controls - Software Installation",
+      "requirement_text": "Procedures and measures shall be implemented to securely manage software installation on operational systems.",
+      "keywords": ["software installation", "change management", "application whitelisting"],
+      "expected_evidence": "Software installation policy, change management procedures",
+      "severity": "Medium",
+      "recommendation_text": "Control software installation through change management and application allowlisting where feasible."
+    },
+    {
+      "requirement_code": "A.8.20",
+      "category": "Technological Controls - Network Security",
+      "requirement_text": "Networks and network devices shall be secured, managed, and controlled to protect information in systems and applications.",
+      "keywords": ["network security", "firewall", "network segmentation", "VPN"],
+      "expected_evidence": "Network security architecture, firewall rules, segmentation documentation",
+      "severity": "Critical",
+      "recommendation_text": "Implement network segmentation, firewall controls, and secure remote access."
+    },
+    {
+      "requirement_code": "A.8.24",
+      "category": "Technological Controls - Cryptography",
+      "requirement_text": "Rules for the effective use of cryptography, including cryptographic key management, shall be defined and implemented.",
+      "keywords": ["cryptography", "encryption", "key management", "PKI"],
+      "expected_evidence": "Cryptographic policy, key management procedures, encryption standards",
+      "severity": "Critical",
+      "recommendation_text": "Define cryptographic standards and implement centralized key management."
+    },
+    {
+      "requirement_code": "A.8.25",
+      "category": "Technological Controls - Secure Development",
+      "requirement_text": "Rules for the secure development of software and systems shall be defined and applied.",
+      "keywords": ["secure SDLC", "secure development", "DevSecOps"],
+      "expected_evidence": "Secure development policy, SDLC documentation, security gates",
+      "severity": "Critical",
+      "recommendation_text": "Integrate security into the SDLC with threat modeling, code review, and security testing gates."
+    },
+    {
+      "requirement_code": "A.8.28",
+      "category": "Technological Controls - Secure Coding",
+      "requirement_text": "Secure coding principles shall be applied to software development.",
+      "keywords": ["secure coding", "OWASP", "SAST", "code review"],
+      "expected_evidence": "Secure coding standards, SAST results, code review records",
+      "severity": "High",
+      "recommendation_text": "Train developers on secure coding and enforce standards through automated scanning and review."
+    },
+    {
+      "requirement_code": "A.8.29",
+      "category": "Technological Controls - Security Testing",
+      "requirement_text": "Security testing processes shall be defined and implemented in the development life cycle.",
+      "keywords": ["security testing", "penetration testing", "DAST", "vulnerability assessment"],
+      "expected_evidence": "Security test plan, penetration test reports, DAST/SAST results",
+      "severity": "High",
+      "recommendation_text": "Include security testing (SAST, DAST, penetration testing) in every release cycle."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  python-service:
+    build:
+      context: ./python-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - INTERNAL_SERVICE_SECRET=${INTERNAL_SERVICE_SECRET}
+      - EMBEDDING_MODEL=all-MiniLM-L6-v2
+    volumes:
+      - ./python-service:/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - complianceai
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - PORT=3001
+      - NODE_ENV=development
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_STORAGE_BUCKET=${SUPABASE_STORAGE_BUCKET:-documents}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ANTHROPIC_MODEL=${ANTHROPIC_MODEL:-claude-sonnet-4-20250514}
+      - INTERNAL_SERVICE_SECRET=${INTERNAL_SERVICE_SECRET}
+      - PYTHON_SERVICE_URL=http://python-service:8000
+      - CLIENT_URL=http://localhost:5173
+      - MAX_FILE_SIZE_MB=${MAX_FILE_SIZE_MB:-25}
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      python-service:
+        condition: service_healthy
+    networks:
+      - complianceai
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3001/api
+      - VITE_SUPABASE_URL=${VITE_SUPABASE_URL}
+      - VITE_SUPABASE_ANON_KEY=${VITE_SUPABASE_ANON_KEY}
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    depends_on:
+      - server
+    networks:
+      - complianceai
+
+networks:
+  complianceai:
+    driver: bridge
